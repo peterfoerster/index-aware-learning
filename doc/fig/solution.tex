@@ -1,0 +1,156 @@
+\begin{tikzpicture}
+    % index 1
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={$\varphi$ (V)}
+    %     ]
+
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {do1_solution_phi_3.dat};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}]
+    %     {do1_solution_phi_2.dat};
+
+    %     \addlegendentry{$\varphi_3$};
+    %     \addlegendimage{color=TUDa-1a, thick};
+
+    %     \addlegendentry{$\varphi_2$};
+    %     \addlegendimage{color=TUDa-9a, dashed, thick};
+
+    %     % [spy using outlines={rectangle, magnification=5, connect spies}]
+    %     % \spy[rectangle, width=1.5cm, height=0.5cm] on (3,5.2) in node at (1,1);
+    % \end{axis}
+
+    % i_L
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={$i_\mathrm{L}$ (mA)}
+    %     ]
+
+    %     \addplot[color=TUDa-6a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}*1e3]
+    %     {do1_solution_i_L.dat};
+
+    %     \addlegendentry{$i_\mathrm{L}$};
+    %     \addlegendimage{color=TUDa-6a, thick};
+    % \end{axis}
+
+    % phi_3
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={difference (V)}
+    %     ]
+
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}] {do1_solution_phi_3.dat};
+
+    %     \addlegendentry{$\hat{\varphi}_3 - \varphi_3$};
+    %     \addlegendimage{color=TUDa-1a, thick};
+    % \end{axis}
+
+    % i_L
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={difference (mA)}
+    %     ]
+
+    %     \addplot[color=TUDa-6a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}*1e3]
+    %     {do1_solution_i_L.dat};
+
+    %     \addlegendentry{$\hat{i}_\mathrm{L} - i_\mathrm{L}$};
+    %     \addlegendimage{color=TUDa-6a, thick};
+    % \end{axis}
+
+    % phi_2
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={difference (V)}
+    %     ]
+
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}] {do1_solution_phi_2.dat};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_5}]{do1_solution_phi_2.dat};
+
+    %     \addlegendentry{$\hat{\varphi}_2 - \varphi_2$};
+    %     \addlegendimage{color=TUDa-1a, thick};
+
+    %     \addlegendentry{$\bar{\varphi}_2 - \varphi_2$};
+    %     \addlegendimage{color=TUDa-9a, dashed, thick};
+    % \end{axis}
+
+    % e_c, e_r
+    % \begin{semilogyaxis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={consistency error (V)},
+    %     % legend style={fill=none}
+    %     ]
+
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {dat/do1_consistency.dat};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_2}]{dat/do1_consistency.dat};
+
+    %     \addlegendentry{$\hat{e}(t)$};
+    %     \addlegendimage{color=TUDa-1a, thick};
+
+    %     \addlegendentry{$\bar{e}(t)$};
+    %     \addlegendimage{color=TUDa-9a, dashed, thick};
+    % \end{semilogyaxis}
+
+    % index 2
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={$\varphi$ (V)}
+    %     ]
+
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {dat/do2_solution_phi_3.dat};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {dat/do2_solution_phi_2.dat};
+
+    %     \addlegendentry{$\varphi_3$};
+    %     \addlegendimage{color=TUDa-1a, thick};
+
+    %     \addlegendentry{$\varphi_2$};
+    %     \addlegendimage{color=TUDa-9a, dashed, thick};
+    % \end{axis}
+
+    % phi_3
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={difference (V)}
+    %     ]
+
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}] {do2_solution_phi_3.dat};
+
+    %     \addlegendentry{$\hat{\varphi}_3 - \varphi_3$};
+    %     \addlegendimage{color=TUDa-1a, thick};
+    % \end{axis}
+
+    % phi_2
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={difference (V)}
+    %     ]
+
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}] {dat/do2_solution_phi_2.dat};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_5}] {dat/do2_solution_phi_2.dat};
+
+    %     \addlegendentry{$\hat{\varphi}_2 - \varphi_2$};
+    %     \addlegendimage{color=TUDa-1a, thick};
+
+    %     \addlegendentry{$\bar{\varphi}_2 - \varphi_2$};
+    %     \addlegendimage{color=TUDa-9a, dashed, thick};
+    % \end{axis}
+
+    % e_c, e_r
+    \begin{semilogyaxis}[
+        xlabel={$t$ (ms)},
+        ylabel={consistency error (V)}
+        ]
+
+        \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {dat/do2_consistency.dat};
+        \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_2}]{dat/do2_consistency.dat};
+        \addplot[color=TUDa-6a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}]{dat/do2_euler_consistency.dat};
+
+        \addlegendentry{$\hat{e}(t)$};
+        \addlegendimage{color=TUDa-1a, thick};
+
+        \addlegendentry{$\bar{e}(t)$};
+        \addlegendimage{color=TUDa-9a, dashed, thick};
+
+        \addlegendentry{$\check{e}(t)$};
+        \addlegendimage{color=TUDa-6a, dotted, thick};
+    \end{semilogyaxis}
+\end{tikzpicture}

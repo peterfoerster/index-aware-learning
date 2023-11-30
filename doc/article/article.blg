@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2021/CVE-2023-32700 patched)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: article.aux
+The style file: WileyNJD-AMA.bst
+Database file #1: biblio.bib
+Warning--empty journal in beneventano2020
+`howpublished' is a missing field, not a string, for entry ltspice
+while executing---line 1090 of file WileyNJD-AMA.bst
+`howpublished' is a missing field, not a string, for entry xyce
+while executing---line 1090 of file WileyNJD-AMA.bst
+`howpublished' is a missing field, not a string, for entry pspice
+while executing---line 1090 of file WileyNJD-AMA.bst
+Warning--can't use both author and editor fields in mehrmann2015
+`school' is a missing field, not a string, for entry jansen2014
+while executing---line 1090 of file WileyNJD-AMA.bst
+Warning--empty school in jansen2014
+`address' is a missing field, not a string, for entry jansen2014
+while executing---line 1090 of file WileyNJD-AMA.bst
+Warning--can't use both author and editor fields in rasmussen2006
+Warning--empty publisher in basak2021
+`howpublished' is a missing field, not a string, for entry stk
+while executing---line 1090 of file WileyNJD-AMA.bst
+You've used 21 entries,
+            2067 wiz_defined-function locations,
+            652 strings with 7946 characters,
+and the built_in function-call counts, 3841 in all, are:
+= -- 327
+> -- 172
+< -- 0
++ -- 74
+- -- 53
+* -- 382
+:= -- 655
+add.period$ -- 33
+call.type$ -- 21
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 26
+duplicate$ -- 189
+empty$ -- 409
+format.name$ -- 53
+if$ -- 879
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 20
+newline$ -- 82
+num.names$ -- 23
+pop$ -- 81
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 35
+stack$ -- 0
+substring$ -- 0
+swap$ -- 38
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 22
+width$ -- 23
+write$ -- 217
+(There were 6 error messages)

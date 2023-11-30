@@ -1,0 +1,9 @@
+#!/bin/bash
+git lfs track "*.dat"
+git lfs track "*.pdf"
+git lfs track "*.jpg"
+git lfs track "*.png"
+
+git add .gitattributes
+
+git commit -m "set up git-lfs"

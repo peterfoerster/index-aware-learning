@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \def\d{2};
+
+    \draw (0,0) node[ground] {};
+    \draw (0,0) to[V=$\mathrm{V}$, v^<=$v_\mathrm{s}$, i^<=$i_\mathrm{V}$, *-*] (0,\d);
+    \draw (0,\d) to[R=$\mathrm{R}$, -*] (\d,\d);
+    \draw (\d,\d) to[L=$\mathrm{L}$, i^=$i_\mathrm{L}$, -*] (2.5*\d,\d);
+    \draw (2.5*\d,\d) to[C=$\mathrm{C}$] (2.5*\d,0);
+    \draw (2.5*\d,\d) to (3.5*\d,\d);
+    \draw (3.5*\d,\d) to[Do=$\mathrm{D}$] (3.5*\d,0);
+    \draw (3.5*\d,0) to (0,0);
+
+    \draw (0,0) node[left] {$\varphi_0$};
+    \draw (0,\d) node[above] {$\varphi_1$};
+    \draw (\d,\d) node[above] {$\varphi_2$};
+    \draw (2.5*\d,\d) node[above] {$\varphi_3$};
+\end{tikzpicture}

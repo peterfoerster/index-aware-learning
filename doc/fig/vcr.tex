@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \def\d{2};
+
+    \draw (0,0) node[ground] {};
+    \draw (0,0) to[V=$\mathrm{V}$, v^<=$v_\mathrm{s}$, i^<=$i_\mathrm{V}$, *-] (0,\d);
+    \draw (\d,0) to[C=$\mathrm{C}$, -*] (\d,\d);
+    % \draw (\d,\d) to[R=$\mathrm{R}_1$, -*] (2*\d,\d);
+    \draw (2*\d,0) to[R=$\mathrm{R}$] (2*\d,\d);
+
+    \draw (0,\d) to (2*\d,\d);
+    \draw (0,0) to (2*\d,0);
+
+    \draw (0,0) node[left] {$\varphi_0$};
+    \draw (\d,\d) node[above] {$\varphi_1$};
+    % \draw (2*\d,\d) node[above] {$\varphi_2$};
+\end{tikzpicture}

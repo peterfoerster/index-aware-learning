@@ -1,0 +1,36 @@
+% \begin{tikzpicture}
+%     \node[rectangle, rounded corners, draw=black, semithick] (dae) at (0,0) {DAE};
+%     \node[rectangle, rounded corners, draw=black, semithick] (ode) at (-2,-2) {\textcolor{TUDa-1a}{ODE}};
+%     \node[rectangle, rounded corners, draw=black, semithick] (ae) at (2,-2) {\textcolor{TUDa-9a}{AE}};
+%     \node[rectangle, rounded corners, draw=black, semithick] (dd) at (-2,-4) {\textcolor{TUDa-1a}{Differential DOFs}};
+%     \node[rectangle, rounded corners, draw=black, semithick] (ad) at (2,-7) {\textcolor{TUDa-9a}{Algebraic DOFs}};
+
+%     \node[circle, fill=TUDa-9a, minimum size=3pt, inner sep=0] (ddae) at (2,-4) {};
+
+%     \draw[->, >=latex, semithick, color=black] (dae) -- (ode) node[above, midway, sloped] {decouple};
+%     \draw[->, >=latex, semithick, color=black] (dae) -- (ae) node[above, midway, sloped] {decouple};
+%     \draw[<-, >=latex, semithick, color=TUDa-1a, dashed] (dd) -- (ode) node[above, midway, sloped] {learn};
+
+%     \draw[-, semithick, color=TUDa-9a, dotted] (dd) -- (ddae);
+%     \draw[-, semithick, color=TUDa-9a, dotted] (ae) -- (ddae);
+%     \draw[<-, >=latex, semithick, color=TUDa-9a, dotted] (ad) -- (ddae) node[above, midway, sloped] {reconstruct};
+% \end{tikzpicture}
+
+% landscape
+\begin{tikzpicture}
+    \node[rectangle, rounded corners, draw=black, semithick] (dae) at (0,0) {DAE};
+    \node[rectangle, rounded corners, draw=black, semithick] (ode) at (2,-2) {\textcolor{TUDa-1a}{ODE}};
+    \node[rectangle, rounded corners, draw=black, semithick] (ae) at (2,2) {\textcolor{TUDa-9a}{AE}};
+    \node[rectangle, rounded corners, draw=black, semithick] (dd) at (5.5,-2) {\textcolor{TUDa-1a}{Differential DOFs}};
+    \node[rectangle, rounded corners, draw=black, semithick] (ad) at (9.5,2) {\textcolor{TUDa-9a}{Algebraic DOFs}};
+
+    \node[circle, fill=TUDa-9a, minimum size=3pt, inner sep=0] (ddae) at (5.5,2) {};
+
+    \draw[->, >=latex, semithick, color=black] (dae) -- (ode) node[above, midway, sloped] {decouple};
+    \draw[->, >=latex, semithick, color=black] (dae) -- (ae) node[above, midway, sloped] {decouple};
+    \draw[<-, >=latex, semithick, color=TUDa-1a, dashed] (dd) -- (ode) node[above, midway, sloped] {learn};
+
+    \draw[-, semithick, color=TUDa-9a, dotted] (dd) -- (ddae);
+    \draw[-, semithick, color=TUDa-9a, dotted] (ae) -- (ddae);
+    \draw[<-, >=latex, semithick, color=TUDa-9a, dotted] (ad) -- (ddae) node[above, midway, sloped] {reconstruct};
+\end{tikzpicture}

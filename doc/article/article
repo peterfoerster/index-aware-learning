@@ -1,0 +1,5 @@
+#!/bin/bash
+lualatex --shell-escape article
+bibtex article
+lualatex --shell-escape article
+lualatex --shell-escape article
