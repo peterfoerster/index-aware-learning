@@ -3,6 +3,7 @@
 \usepackage{mathtools}
 \usepackage{tuda-pgfplots}
 \usepackage{siunitx}
+\usepackage[european]{circuitikz}
 \usepackage{subcaption}
 
 \articletype{Original Article}
@@ -27,6 +28,9 @@
 \newcommand{\vphi}{\boldsymbol{\varphi}}
 \renewcommand{\i}[1]{\mb{i}_\mr{#1}}
 \renewcommand{\v}[1]{\mb{v}_\mr{#1}}
+
+\usetikzlibrary{external}
+\tikzexternalize
 
 \begin{document}
 
@@ -679,6 +683,9 @@ and comparing it to the other approaches, see \autoref{fig:do2_consistency}, sho
 This article introduced a new method for learning the time and parameter dependent behavior of electrical circuits. The method assumes the circuit to be modeled using MNA and then exploits the structure of MNA to improve the learning process by splitting it into a learning and a reconstruction stage, compare \autoref{fig:ial}. It achieves this by decoupling the underlying DAE into an ODE and a purely algebraic equation. Benefits of the method include a reduction in the number of variables that are to be learned during the learning stage and the exact adherence of the learned solution to the inherent constraints of the circuit model after the reconstruction stage. Two numerical examples illustrated both benefits. The examples also showed that the exact recovery of the constraints might improve the accuracy of the learned solutions. Furthermore, additional computational savings may be possible as some of the parameters of interest only appear in the reconstruction stage, which entirely avoids the need for training data with varying values of these parameters. We emphasize that the approach is independent of the machine learning method used during the learning stage, such that the learning method may be chosen according to the problem at hand. Lastly, we showcased an alternative approach that avoids the need for the decoupling and the associated implementation, while still improving the adherence of the learned solution to the algebraic constraints of the DAE.
 
 Multiple extensions are possible within this index-aware learning framework. A natural first step could be to make use of the topological decomposition that was hinted at in \autoref{sec:dc}. This would pave the way for the inclusion of controlled sources within the workflow, and thus the industrial use of the approach, with the idea being the extension of the topological decomposition to also allow for controlled sources. Focusing in on the idea of adhering to physically meaningful constraints, one could work on extending the concept to a charge conserving variant of MNA, to potentially guarantee charge conservation even for the learned solutions. Yet another direction may be the application of index-aware learning to DAEs arising elsewhere, e.g.~in modified loop analysis. (The dissection concept applies to a more general class of DAEs, as \autoref{sec:dc} showed.) Finally, separate but related work may focus on improving the learning stage by developing new methods that are especially suited for learning ODEs.
+
+\section{Images}
+\input{../fig/full_wave_rectifier}
 
 % \begin{table}
 %     \caption{}

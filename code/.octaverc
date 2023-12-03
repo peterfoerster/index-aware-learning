@@ -1,5 +1,5 @@
-addpath('./dat', '-begin');
-addpath('./fig', '-begin');
+addpath('./dat/do', '-begin');
+addpath('./dat/fwr', '-begin');
 addpath('/home/peter/octave/stk-2.8.0', '-begin');
 
 stk_init;

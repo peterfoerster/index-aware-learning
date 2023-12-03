@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/CVE-2023-32700 patched)  (format=lualatex 2022.5.26)  7 OCT 2023 15:05
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/CVE-2023-32700 patched)  (format=lualatex 2022.5.26)  30 NOV 2023 11:43
  system commands enabled.
 **article
 (./article.tex
@@ -1542,72 +1542,163 @@ Package: siunitx 2021-04-17 v2.8e A comprehensive (SI) units package
  (/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+Package: circuitikz 2021/05/09{} The CircuiTikz circuit drawing package version
+ 1.3.6
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.
+code.tex
+File: pgflibraryarrows.meta.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfarrowinset=\dimen413
+\pgfarrowlength=\dimen414
+\pgfarrowwidth=\dimen415
+\pgfarrowlinewidth=\dimen416
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.te
+x
+File: pgfmodulebending.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransf
+ormations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgftransformnonlinearflatness=\dimen417
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.
+code.tex
+File: pgflibrarycurvilinear.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@curvilinear@time@a=\dimen418
+\pgf@curvilinear@length@a=\dimen419
+\pgf@curvilinear@length@b=\dimen420
+\pgf@curvilinear@length@c=\dimen421
+\pgf@curvilinear@length@d=\dimen422
+)
+\pgf@arrows@the@rigidity=\dimen423
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryfpu.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
+\pgf@circ@count@a=\count474
+\pgf@circ@count@b=\count475
+\pgf@circ@count@c=\count476
+\pgf@circ@res@up=\dimen424
+\pgf@circ@res@down=\dimen425
+\pgf@circ@res@zero=\dimen426
+\pgf@circ@res@left=\dimen427
+\pgf@circ@res@right=\dimen428
+\pgf@circ@res@other=\dimen429
+\pgf@circ@res@step=\dimen430
+\pgf@circ@res@temp=\dimen431
+\pgf@circ@Rlen=\dimen432
+\pgf@circ@scaled@Rlen=\dimen433
+\pgfstartlinewidth=\dimen434
+)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
+\ctikz@scratchbox=\box143
+)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
+\pgf@circ@res@count=\count477
+)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
+\pgfcirc@labelshift=\dimen435
+)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex))
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
-\c@subfigure=\count474
-\c@subtable=\count475
-) (./article.aux)
+\c@subfigure=\count478
+\c@subtable=\count479
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibrar
+yexternal.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zexternalshared.code.tex))
+\openout4 = article.auxlock
+ (./article.aux)
 \openout1 = article.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
-1.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+5.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 35.
 LaTeX Font Info:    Trying to load font information for LS1+stix on input line 
-31.
+35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 35.
 LaTeX Font Info:    Trying to load font information for LS2+stix on input line 
-31.
+35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd
 File: ls2stix.fd 2015/04/17 v1.1.2-latex STIX LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    ... okay on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count476
-\scratchdimen=\dimen413
-\scratchbox=\box143
-\nofMPsegments=\count477
-\nofMParguments=\count478
+\scratchcounter=\count480
+\scratchdimen=\dimen436
+\scratchbox=\box144
+\nofMPsegments=\count481
+\nofMParguments=\count482
 \everyMPshowfont=\toks63
-\MPscratchCnt=\count479
-\MPscratchDim=\dimen414
-\MPnumerator=\count480
-\makeMPintoPDFobject=\count481
+\MPscratchCnt=\count483
+\MPscratchDim=\dimen437
+\MPnumerator=\count484
+\makeMPintoPDFobject=\count485
 \everyMPtoPDFconversion=\toks64
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
@@ -1618,7 +1709,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 31.
+Package hyperref Info: Link coloring OFF on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1629,11 +1720,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count482
+\c@section@level=\count486
 )
-LaTeX Info: Redefining \ref on input line 31.
-LaTeX Info: Redefining \pageref on input line 31.
-LaTeX Info: Redefining \nameref on input line 31.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1671,12 +1762,12 @@ LaTeX Info: Redefining \nameref on input line 31.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count483
+\c@lstlisting=\count487
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 31.
+ on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2021-04-17 v2.8e siunitx: Abbreviated units
@@ -1685,55 +1776,55 @@ File: siunitx-abbreviations.cfg 2021-04-17 v2.8e siunitx: Abbreviated units
 -English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 31
+LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 35
 .
 LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 31.
+ne 35.
  (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixex on input lin
-e 31.
+e 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd
 File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input l
-ine 31.
+ine 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd
 File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixbb on input lin
-e 31.
+e 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd
 File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixcal on input li
-ne 31.
+ne 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd
 File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
 ons
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixsf on input lin
-e 31.
+e 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd
 File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixtt on input lin
-e 31.
+e 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 
 )
-Overfull \hbox (346.99213pt too wide) in paragraph at lines 50--50
+Overfull \hbox (346.99213pt too wide) in paragraph at lines 54--54
 [][] | || []|[][] 
  []
 
@@ -1764,7 +1855,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
 <do1.pdf, id=144, 251.4173pt x 94.15175pt>
 File: do1.pdf Graphic file (type pdf)
 <use do1.pdf>
-Package luatex.def Info: do1.pdf  used on input line 264.
+Package luatex.def Info: do1.pdf  used on input line 268.
 (luatex.def)             Requested size: 253.75394pt x 95.02928pt.
  [5
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
@@ -1781,143 +1872,150 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
 <do2.pdf, id=162, 238.90756pt x 94.15175pt>
 File: do2.pdf Graphic file (type pdf)
 <use do2.pdf>
-Package luatex.def Info: do2.pdf  used on input line 399.
+Package luatex.def Info: do2.pdf  used on input line 403.
 (luatex.def)             Requested size: 253.75394pt x 100.00148pt.
 [6<./do1.pdf>] [7<./do2.pdf>]
 <ial.pdf, id=241, 321.02736pt x 134.92006pt>
 File: ial.pdf Graphic file (type pdf)
 <use ial.pdf>
-Package luatex.def Info: ial.pdf  used on input line 500.
+Package luatex.def Info: ial.pdf  used on input line 504.
 (luatex.def)             Requested size: 355.25395pt x 149.31627pt.
  [8<./ial.pdf>] [9]
 <do1_solution_phi.pdf, id=298, 238.68773pt x 194.36214pt>
 File: do1_solution_phi.pdf Graphic file (type pdf)
 <use do1_solution_phi.pdf>
-Package luatex.def Info: do1_solution_phi.pdf  used on input line 569.
+Package luatex.def Info: do1_solution_phi.pdf  used on input line 573.
 (luatex.def)             Requested size: 203.00005pt x 165.31238pt.
 <do1_solution_i_L.pdf, id=299, 238.68773pt x 194.38522pt>
 File: do1_solution_i_L.pdf Graphic file (type pdf)
 <use do1_solution_i_L.pdf>
-Package luatex.def Info: do1_solution_i_L.pdf  used on input line 569.
+Package luatex.def Info: do1_solution_i_L.pdf  used on input line 573.
 (luatex.def)             Requested size: 203.00005pt x 165.33202pt.
 <do1_convergence.pdf, id=300, 238.29828pt x 193.59627pt>
 File: do1_convergence.pdf Graphic file (type pdf)
 <use do1_convergence.pdf>
-Package luatex.def Info: do1_convergence.pdf  used on input line 577.
+Package luatex.def Info: do1_convergence.pdf  used on input line 581.
 (luatex.def)             Requested size: 203.00005pt x 164.91798pt.
 <do1_error_phi_3.pdf, id=306, 238.68773pt x 205.51079pt>
 File: do1_error_phi_3.pdf Graphic file (type pdf)
 <use do1_error_phi_3.pdf>
-Package luatex.def Info: do1_error_phi_3.pdf  used on input line 585.
+Package luatex.def Info: do1_error_phi_3.pdf  used on input line 589.
 (luatex.def)             Requested size: 203.00005pt x 174.79472pt.
 <do1_error_i_L.pdf, id=307, 238.68773pt x 205.51581pt>
 File: do1_error_i_L.pdf Graphic file (type pdf)
 <use do1_error_i_L.pdf>
-Package luatex.def Info: do1_error_i_L.pdf  used on input line 585.
+Package luatex.def Info: do1_error_i_L.pdf  used on input line 589.
 (luatex.def)             Requested size: 203.00005pt x 174.799pt.
  [10<./do1_solution_phi.pdf><./do1_solution_i_L.pdf><./do1_convergence.pdf>]
 <do1_error_phi_2.pdf, id=430, 238.68773pt x 205.51881pt>
 File: do1_error_phi_2.pdf Graphic file (type pdf)
 <use do1_error_phi_2.pdf>
-Package luatex.def Info: do1_error_phi_2.pdf  used on input line 593.
+Package luatex.def Info: do1_error_phi_2.pdf  used on input line 597.
 (luatex.def)             Requested size: 203.00005pt x 174.80156pt.
 <do1_consistency.pdf, id=431, 238.68773pt x 194.37619pt>
 File: do1_consistency.pdf Graphic file (type pdf)
 <use do1_consistency.pdf>
-Package luatex.def Info: do1_consistency.pdf  used on input line 593.
+Package luatex.def Info: do1_consistency.pdf  used on input line 597.
 (luatex.def)             Requested size: 203.00005pt x 165.32433pt.
  [11<./do1_error_phi_3.pdf><./do1_error_i_L.pdf><./do1_error_phi_2.pdf><./do1_co
 nsistency.pdf>]
 <do2_solution_phi.pdf, id=595, 238.68773pt x 194.3772pt>
 File: do2_solution_phi.pdf Graphic file (type pdf)
 <use do2_solution_phi.pdf>
-Package luatex.def Info: do2_solution_phi.pdf  used on input line 616.
+Package luatex.def Info: do2_solution_phi.pdf  used on input line 620.
 (luatex.def)             Requested size: 203.00005pt x 165.3252pt.
 <do2_convergence.pdf, id=596, 238.30128pt x 193.59627pt>
 File: do2_convergence.pdf Graphic file (type pdf)
 <use do2_convergence.pdf>
-Package luatex.def Info: do2_convergence.pdf  used on input line 616.
+Package luatex.def Info: do2_convergence.pdf  used on input line 620.
 (luatex.def)             Requested size: 203.00005pt x 164.91798pt.
 <do2_error_phi_3.pdf, id=598, 238.68773pt x 205.5138pt>
 File: do2_error_phi_3.pdf Graphic file (type pdf)
 <use do2_error_phi_3.pdf>
-Package luatex.def Info: do2_error_phi_3.pdf  used on input line 625.
+Package luatex.def Info: do2_error_phi_3.pdf  used on input line 629.
 (luatex.def)             Requested size: 203.00005pt x 174.7973pt.
 <do2_error_phi_2.pdf, id=599, 238.68773pt x 205.5138pt>
 File: do2_error_phi_2.pdf Graphic file (type pdf)
 <use do2_error_phi_2.pdf>
-Package luatex.def Info: do2_error_phi_2.pdf  used on input line 625.
+Package luatex.def Info: do2_error_phi_2.pdf  used on input line 629.
 (luatex.def)             Requested size: 203.00005pt x 174.7973pt.
 <do2_consistency.pdf, id=602, 238.68773pt x 194.37619pt>
 File: do2_consistency.pdf Graphic file (type pdf)
 <use do2_consistency.pdf>
-Package luatex.def Info: do2_consistency.pdf  used on input line 633.
+Package luatex.def Info: do2_consistency.pdf  used on input line 637.
 (luatex.def)             Requested size: 203.00005pt x 165.32433pt.
  [12<./do2_solution_phi.pdf><./do2_convergence.pdf>] [13<./do2_error_phi_3.pdf><
 ./do2_error_phi_2.pdf><./do2_consistency.pdf>]
 <do2_euler_phi_3.pdf, id=800, 238.68773pt x 205.5178pt>
 File: do2_euler_phi_3.pdf Graphic file (type pdf)
 <use do2_euler_phi_3.pdf>
-Package luatex.def Info: do2_euler_phi_3.pdf  used on input line 659.
+Package luatex.def Info: do2_euler_phi_3.pdf  used on input line 663.
 (luatex.def)             Requested size: 203.00005pt x 174.80072pt.
 <do2_euler_phi_2.pdf, id=801, 238.68773pt x 205.5178pt>
 File: do2_euler_phi_2.pdf Graphic file (type pdf)
 <use do2_euler_phi_2.pdf>
-Package luatex.def Info: do2_euler_phi_2.pdf  used on input line 659.
+Package luatex.def Info: do2_euler_phi_2.pdf  used on input line 663.
 (luatex.def)             Requested size: 203.00005pt x 174.80072pt.
- [14<./do2_euler_phi_3.pdf><./do2_euler_phi_2.pdf>] (./article.bbl [15]) [16]
-<cortes.jpg, id=917, 231.7458pt x 308.352pt>
+ [14<./do2_euler_phi_3.pdf><./do2_euler_phi_2.pdf>] (../fig/full_wave_rectifier
+.tex
+===== Image 'article-figure0' is up-to-date. ======
+) [15] [16]
+Overfull \vbox (196.77103pt too high) has occurred while \output is active []
+
+
+[17<./article-figure0.pdf>] (./article.bbl [18]) [19]
+<cortes.jpg, id=943, 231.7458pt x 308.352pt>
 File: cortes.jpg Graphic file (type jpg)
 <use cortes.jpg>
-Package luatex.def Info: cortes.jpg  used on input line 725.
+Package luatex.def Info: cortes.jpg  used on input line 732.
 (luatex.def)             Requested size: 65.99872pt x 85.9992pt.
 File: cortes.jpg Graphic file (type jpg)
 <use cortes.jpg>
-Package luatex.def Info: cortes.jpg  used on input line 725.
+Package luatex.def Info: cortes.jpg  used on input line 732.
 (luatex.def)             Requested size: 65.99872pt x 85.9992pt.
 
 warning  (file forster.jpg) (readjpg): Exif resolution 300dpi x 300dpi differs f
 rom the input resolution 299dpi x 299dpi
-<forster.jpg, id=918, 99.4917pt x 127.9179pt>
+<forster.jpg, id=944, 99.4917pt x 127.9179pt>
 File: forster.jpg Graphic file (type jpg)
 <use forster.jpg>
-Package luatex.def Info: forster.jpg  used on input line 728.
+Package luatex.def Info: forster.jpg  used on input line 735.
 (luatex.def)             Requested size: 66.00325pt x 86.00122pt.
 File: forster.jpg Graphic file (type jpg)
 <use forster.jpg>
-Package luatex.def Info: forster.jpg  used on input line 728.
+Package luatex.def Info: forster.jpg  used on input line 735.
 (luatex.def)             Requested size: 66.00325pt x 86.00122pt.
-<jansen.jpg, id=919, 284.56313pt x 369.84172pt>
+<jansen.jpg, id=945, 284.56313pt x 369.84172pt>
 File: jansen.jpg Graphic file (type jpg)
 <use jansen.jpg>
-Package luatex.def Info: jansen.jpg  used on input line 731.
+Package luatex.def Info: jansen.jpg  used on input line 738.
 (luatex.def)             Requested size: 65.99957pt x 85.9986pt.
 File: jansen.jpg Graphic file (type jpg)
 <use jansen.jpg>
-Package luatex.def Info: jansen.jpg  used on input line 731.
+Package luatex.def Info: jansen.jpg  used on input line 738.
 (luatex.def)             Requested size: 65.99957pt x 85.9986pt.
 
 warning  (file schilders.jpg) (readjpg): Bad Exif resolution 0dpi x 0dpi (zero o
 r negative value of a signed integer)
-<schilders.jpg, id=920, 495.56572pt x 660.75429pt>
+<schilders.jpg, id=946, 495.56572pt x 660.75429pt>
 File: schilders.jpg Graphic file (type jpg)
 <use schilders.jpg>
-Package luatex.def Info: schilders.jpg  used on input line 734.
+Package luatex.def Info: schilders.jpg  used on input line 741.
 (luatex.def)             Requested size: 65.99863pt x 85.9918pt.
 File: schilders.jpg Graphic file (type jpg)
 <use schilders.jpg>
-Package luatex.def Info: schilders.jpg  used on input line 734.
+Package luatex.def Info: schilders.jpg  used on input line 741.
 (luatex.def)             Requested size: 65.99863pt x 85.9918pt.
-<schoeps.jpg, id=921, 99.9735pt x 128.3997pt>
+<schoeps.jpg, id=947, 99.9735pt x 128.3997pt>
 File: schoeps.jpg Graphic file (type jpg)
 <use schoeps.jpg>
-Package luatex.def Info: schoeps.jpg  used on input line 737.
+Package luatex.def Info: schoeps.jpg  used on input line 744.
 (luatex.def)             Requested size: 66.00253pt x 85.99991pt.
 File: schoeps.jpg Graphic file (type jpg)
 <use schoeps.jpg>
-Package luatex.def Info: schoeps.jpg  used on input line 737.
+Package luatex.def Info: schoeps.jpg  used on input line 744.
 (luatex.def)             Requested size: 66.00253pt x 85.99991pt.
-[17
+[20
 
 <./cortes.jpg><./forster.jpg
 warning  (readjpg): Exif resolution 300dpi x 300dpi differs from the input resol
@@ -1928,14 +2026,14 @@ warning  (readjpg): Bad Exif resolution 0dpi x 0dpi (zero or negative value of a
 ><./schoeps.jpg>] (./article.aux))
 
 Here is how much of LuaTeX's memory you used:
- 44940 strings out of 478388
- 156277,1648299 words of node,token memory allocated
+ 59056 strings out of 478388
+ 156277,2373549 words of node,token memory allocated
  5818 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 4 dir, 3 glue, 560 kern, 7 glyph, 767 attribute, 87
  glue_spec, 385 attribute_list, 2 write, 3 pdf_action nodes
-   avail lists: 1:1,2:2096,3:280,4:76,5:1256,6:57,7:11102,8:79,9:2073,10:34,11:8
+   avail lists: 1:1,2:2096,3:280,4:72,5:1189,6:57,7:11102,8:79,9:2073,10:34,11:8
 17
- 63160 multiletter control sequences out of 65536+600000
+ 77109 multiletter control sequences out of 65536+600000
  268 fonts using 22231855 bytes
  114i,19n,105p,1511b,1155s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}</usr/share/texl
@@ -1951,10 +2049,10 @@ mathit.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm-bo
 ld.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on article.pdf (17 pages, 3397905 bytes).
+Output written on article.pdf (20 pages, 3412952 bytes).
 
-PDF statistics: 1026 PDF objects out of 1200 (max. 8388607)
- 786 compressed objects within 8 object streams
- 96 named destinations out of 1000 (max. 131072)
- 136 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1057 PDF objects out of 1200 (max. 8388607)
+ 810 compressed objects within 9 object streams
+ 100 named destinations out of 1000 (max. 131072)
+ 144 words of extra memory for PDF output out of 10000 (max. 100000000)
 
