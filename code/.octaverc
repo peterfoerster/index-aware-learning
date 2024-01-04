@@ -1,3 +1,4 @@
+addpath('./csv/fwr2', '-begin');
 addpath('./dat/do', '-begin');
 addpath('./dat/fwr', '-begin');
 addpath('/home/peter/octave/stk-2.8.0', '-begin');

@@ -46,23 +46,17 @@ Pb = Vb = sym([[0, 0, 0]; [1, 0, 0]; [0, 1, 0]; [0, 0, 1]]);
 Qt = null(Wb.' * Kb_P);
 Pt = sym([1; 0]);
 
-ft_P  = inv(Wb.' * Kb_P * Pt) * Wb.' * fb;
-ft_Pp = -i_sp;
+% ft_P  = -inv(Wb.' * Kb_P * Pt) * Wb.' * fb;
+% ft_Pp = i_sp;
 
-Kb   = -inv(Vb.' * Kb_Q * Pb) * Vb.' * Kb_P * Qt;
-fb_P = -inv(Vb.' * Kb_Q * Pb) * (Vb.' * Kb_P * Pt + Vb.' * fb);
-fh   = Mt * Pt * ft_Pp + Kb * Pb * ft_P + Kt_Q * Pb * fb_P + ft;
-return
+% Wt = null((Mt * Qt).');
+Wt = [-L_2; L_12];
+Vt = [L_2; L_12];
 
-% (Mt * Qt).';
-Wt = sym([[0]; [1]])
-Vt = sym([[1]; [0]])
+% alternative ending
+Wh = null((Kt_Q * Qb).');
+Vh = sym([1; 0]);
 
 % second stage
-Mt_2  = Vt.' * Mt * Qt
-Kt_P2 = Vt.' * (Mt * Qtp + Kt_P * Qt)
-Kt_Q2 = Vt.' * Kt_Q * Qb
-ft_2  = Vt.' * (ft - Mt * Pt * xt_Pp - (Mt * Ptp + Kt_P * Pt) * xt_P)
-Kb_P2 = Wt.' * (Mt * Qtp + Kt_P * Qt)
 Kb_Q2 = Wt.' * Kt_Q * Qb
-fb_2  = Wt.' * (ft - Mt * Pt * xt_Pp - (Mt * Ptp + Kt_P * Pt) * xt_P)
+Kb_Q2 = Vh.' * Kt_Q * Qb
