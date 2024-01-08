@@ -1,4 +1,4 @@
-variables = ['i_L_2'; 'phi_1'; 'phi_2'; 'phi_3'; 'phi_4'; 'i_L_1'];
+variables = ['i_L_2'; 'v_34'; 'phi_1'; 'phi_2'; 'phi_3'; 'phi_4'; 'i_L_1'];
 
 t_0       = 0;
 t_f       = 5e-2;
@@ -14,7 +14,7 @@ for iv = 1:length(variables)
     t        = linspace(t_0, t_f, N_t);
 
     % all sampling points
-    T_1 = T_2 = [20:10:100] + 273.15;
+    T_1 = T_2 = [20:10:90] + 273.15;
 
     % initial points
     N_t_i = length(i_t_i);
@@ -31,8 +31,6 @@ for iv = 1:length(variables)
         for i_1 = 1:N_T_1
             filename = ['fwr2_Deltat=' num2str(Deltat) '_T_1=' num2str(T_1(i_1)) '_T_2=' num2str(T_2(i_2)) '_T_3=' num2str(T_2(i_2)) '_T_4=' num2str(T_1(i_1)) '.csv'];
             data     = csvread(filename);
-            % exclude first two timesteps
-            data     = data(3:end,:);
             t_d      = data(:,1)';
             x_d      = data(:,2:end)';
 
@@ -51,13 +49,19 @@ for iv = 1:length(variables)
                 x = interp1(t_d, x_d(4,:), t);
             elseif (strcmp(variable, 'i_L_1'))
                 x = interp1(t_d, x_d(5,:), t);
+            else
+                variable = variable(1:4);
+                if (strcmp(variable, 'v_34'))
+                    x = interp1(t_d, x_d(3,:)-x_d(4,:), t);
+                end
             end
             y(i_t*N_t+1:(i_t+1)*N_t) = x';
 
-            % hold on
-            % plot(t, x)
-            % hold off
-            % pause
+            % hold on;
+            % plot(t(500:end), x(500:end), 'b', 'linewidth', 2);
+            % plot(t(1:500), x(1:500), 'r', 'linewidth', 2);
+            % hold off;
+            % pause;
 
             % check if solution is parameter dependent
             if (i_1 == i_2 == 1)

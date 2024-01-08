@@ -69,7 +69,7 @@ if (samples)
             filename = ['dat/fwr/fwr_Deltat=' num2str(Deltat) '_T_1=' num2str(T_1) '_T_2=' num2str(T_2) '_T_3=' num2str(T_2) '_T_4=' num2str(T_1) '.dat'];
             if (~exist(filename))
                 T      = [T_1; T_2; T_2; T_1];
-                % [x, t] = trapezoidal_rule_MNA(t_0, t_f, Deltat, M, @(x) K(x, T), @(t) f(t), x_0);
+                % [x, t] = trapezoidal_rule(t_0, t_f, Deltat, M, @(x) K(x, T), @(t) f(t), x_0);
                 [x, t] = implicit_euler(t_0, t_f, Deltat, M, @(x) K(x, T), @(t) -f(t), x_0);
                 write_dat (filename, t, x);
             end
@@ -83,7 +83,7 @@ if (convergence)
     Deltath  = 1e-5;
     filename = ['fwr_Deltat=' num2str(Deltath) '.dat'];
     if (~exist(filename))
-        % [xh, th] = trapezoidal_rule_MNA(t_0, t_f, Deltath, M, @(x) K(x, T), @(t) f(t), x_0);
+        % [xh, th] = trapezoidal_rule(t_0, t_f, Deltath, M, @(x) K(x, T), @(t) f(t), x_0);
         [xh, th] = implicit_euler(t_0, t_f, Deltath, M, @(x) K(x, T), @(t) -f(t), x_0);
         % M x' + K x + f(t) = 0
         % options = odeset('Mass', M);
@@ -104,7 +104,7 @@ if (convergence)
     for i_t = 1:length(Deltat)
         filename = ['fwr_Deltat=' num2str(Deltat(i_t)) '.dat'];
         if (~exist(filename))
-            % [x, t] = trapezoidal_rule_MNA(t_0, t_f, Deltat(i_t), M, @(x) K(x, T), @(t) f(t), x_0);
+            % [x, t] = trapezoidal_rule(t_0, t_f, Deltat(i_t), M, @(x) K(x, T), @(t) f(t), x_0);
             [x, t] = implicit_euler(t_0, t_f, Deltat(i_t), M, @(x) K(x, T), @(t) -f(t), x_0);
             write_dat (filename, t, x);
         else

@@ -2,7 +2,7 @@
 pkg load symbolic
 
 syms phi_1 phi_2 phi_3 phi_4 i_L_1 i_L_2
-syms L_1 L_2 L_12 g_D_1 g_D_2 g_D_3 g_D_4 R i_s i_sp
+syms C L_1 L_2 L_12 g_D_1 g_D_2 g_D_3 g_D_4 R i_s i_sp
 
 phi = [phi_1; phi_2; phi_3; phi_4];
 i_L = [i_L_1; i_L_2];
@@ -21,14 +21,14 @@ A_I = [-1; 0; 0; 0];
 G = [[g_D_1, 0, 0, 0, 0]; [0, g_D_2, 0, 0, 0]; [0, 0, g_D_3, 0, 0]; [0, 0, 0, g_D_4, 0]; [0, 0, 0, 0, 1/R]];
 L = [[L_1, L_12]; [L_12, L_2]];
 
-M = [[zeros(n_phi, n_phi), zeros(n_phi, n_L), zeros(n_phi, n_V)]; [zeros(n_L, n_phi), L, zeros(n_L, n_V)]; [zeros(n_V, n_phi), zeros(n_V, n_L), zeros(n_V, n_V)]];
+M = [[A_C*C*A_C.', zeros(n_phi, n_L), zeros(n_phi, n_V)]; [zeros(n_L, n_phi), L, zeros(n_L, n_V)]; [zeros(n_V, n_phi), zeros(n_V, n_L), zeros(n_V, n_V)]];
 % K = [[A_R*G*A_R.', A_L, A_V]; [-A_L.', zeros(n_L, n_L), zeros(n_L, n_V)]; [-A_V.', zeros(n_V, n_L), zeros(n_V, n_V)]];
 K = [[A_R*G*A_R.', A_L, A_V]; [-A_L.', zeros(n_L, n_L), zeros(n_L, n_V)]];
 f = [A_I*i_s; zeros(n_L, 1); zeros(n_V, 1)];
 
 % first basis functions
 Q = W = null(M);
-P = V = sym([[zeros(4, 2)]; [1, 0]; [0, 1]]);
+P = V = sym([[zeros(2, 3)]; [1, 0, 0]; [0, 0, 0]; [0, 1, 0]; [0, 0, 1]]);
 
 % first stage
 Mt   = V.' * M * P;
@@ -41,21 +41,18 @@ fb   = W.' * f;
 
 % second basis functions
 Qb = Wb = null(Kb_Q);
-Pb = Vb = sym([[0, 0, 0]; [1, 0, 0]; [0, 1, 0]; [0, 0, 1]]);
+Pb = Vb = sym([[0, 0]; [1, 0]; [0, 1]]);
 
 Qt = null(Wb.' * Kb_P);
-Pt = sym([1; 0]);
+Pt = sym([0; 1; 0]);
 
-% ft_P  = -inv(Wb.' * Kb_P * Pt) * Wb.' * fb;
-% ft_Pp = i_sp;
-
-% Wt = null((Mt * Qt).');
-Wt = [-L_2; L_12];
-Vt = [L_2; L_12];
+Wt = null((Mt * Qt).');
+Wt = [0; -L_2; L_12];
+Vt = [[1, 0]; [0, L_2]; [0 L_12]];
 
 % alternative ending
 Wh = null((Kt_Q * Qb).');
-Vh = sym([1; 0]);
+Vh = sym([0; 1; 0]);
 
 % second stage
 Kb_Q2 = Wt.' * Kt_Q * Qb

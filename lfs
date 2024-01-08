@@ -1,4 +1,5 @@
 #!/bin/bash
+git lfs track "*.csv"
 git lfs track "*.dat"
 git lfs track "*.pdf"
 git lfs track "*.jpg"

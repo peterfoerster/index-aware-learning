@@ -146,31 +146,3 @@ fb   = @(t) W.' * f(t);
 
 xt_0 = zeros(14,1);
 xb_0 = -Kb_Q \ (Kb_P*xt_0 + fb(T_0));
-
-return
-
-%%%%%%%%%%%%
-    M = [zeros(2,5); zeros(1,2) C zeros(1,2); zeros(1,3) L 0; zeros(1,5)];
-    K = @(v_D) [G -G 0 0 1; -G G 0 1 0; 0 0 g_D(v_D) -1 0; 0 -1 1 0 0; -1 0 0 0 0];
-    f = @(t) [0; 0; 0; 0; -v_s(t)];
-
-    % phi_3 = 0, i_L = 0 => phi_1 = v_s, phi_2 = v_s, i_v = 0
-    x_0 = [v_s(T_0); v_s(T_0); 0; 0; 0];
-
-    filename = 'do1.dat';
-    % if (~exist(filename))
-        % v_D = phi_3 = x_3
-        % Deltat         = 1e-7;
-        [x_ref, t_ref] = implicit_euler (T_0, T, Deltat, M, @(x) K(x(3)), @(t) f(t), x_0);
-        % write_dat (filename, t, x);
-
-        % Deltat  = [1e-4 1e-5 1e-6];
-        % e_phi_3 = NaN(1, 3);
-        % e_i_L   = NaN(1, 3);
-        % for it=1:length(Deltat)
-        %     [x, t]      = implicit_euler (T_0, T, Deltat(it), M, @(x) K(x(3)), @(t) f(t), x_0);
-        %     e_phi_3(it) = norm(x_ref(3,:) - interp1(t, x(3,:), t_ref)) / norm(x_ref(3,:));
-        %     e_i_L(it)   = norm(x_ref(4,:) - interp1(t, x(4,:), t_ref)) / norm(x_ref(4,:));
-        % end
-    % end
-% end

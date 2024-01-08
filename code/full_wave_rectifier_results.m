@@ -4,8 +4,6 @@ plot_consistency = 1; % 0, 1
 variables = ['i_L_1'; 'i_L_2'; 'v_1'; 'v_2'; 'v_3'; 'v_4'; 'i_V'];
 tol       = [5e-3]; % 1e-2, 5e-3, 1e-3
 
-warning("off", "Octave:data-file-in-path");
-
 t_0       = 0;
 t_f       = 5e-2;
 Deltat    = 1e-5;
@@ -52,7 +50,7 @@ if (plot_solution)
         variable = variables(iv,:);
         filename = ['fwr_Deltat=' num2str(Deltat) '_T_1=' num2str(T(1)) '_T_2=' num2str(T(2)) '_T_3=' num2str(T(3)) '_T_4=' num2str(T(4)) '.dat'];
         if (~exist(filename))
-            % [x_d, t_d] = trapezoidal_rule_MNA(t_0, t_f, Deltat, M, @(x) K(x, T), @(t) f(t), x_0);
+            % [x_d, t_d] = trapezoidal_rule(t_0, t_f, Deltat, M, @(x) K(x, T), @(t) f(t), x_0);
             [x_d, t_d] = implicit_euler(t_0, t_f, Deltat, M, @(x) K(x, T), @(t) -f(t), x_0);
             write_dat (filename, t_d, x_d);
         else
