@@ -4,6 +4,7 @@ bibtex article
 lualatex --shell-escape article
 lualatex --shell-escape article
 
+rm article-figure0.dep
 rm article-figure0.dpth
 rm article-figure0.log
 rm article-figure0.md5

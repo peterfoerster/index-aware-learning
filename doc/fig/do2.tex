@@ -1,17 +1,17 @@
 \begin{tikzpicture}
-    \def\d{2};
+    \def\l{2.1};
 
     \draw (0,0) node[ground] {};
-    \draw (0,0) to[I=$\mathrm{I}$, i^=$i_\mathrm{s}$, *-*] (0,\d);
-    \draw (0,\d) to[R=$\mathrm{R}$, -*] (\d,\d);
-    \draw (\d,\d) to[L=$\mathrm{L}$, i^=$i_\mathrm{L}$, -*] (2.5*\d,\d);
-    \draw (2.5*\d,\d) to[C=$\mathrm{C}$] (2.5*\d,0);
-    \draw (2.5*\d,\d) to (3.5*\d,\d);
-    \draw (3.5*\d,\d) to[Do=$\mathrm{D}$] (3.5*\d,0);
-    \draw (3.5*\d,0) to (0,0);
+    \draw (0,0) to[I=$i_\mr{s}$, -*] (0,\l);
+    \draw (0,\l) to[R=$\mr{R}$, -*] (\l,\l);
+    \draw (\l,\l) to[L=$\mr{L}$, i^=$i_\mr{L}$, -*] (2.5*\l,\l);
+    \draw (2.5*\l,\l) to[C=$\mr{C}$] (2.5*\l,0);
+    \draw (3.5*\l,\l) to[Do=$\mr{D}$] (3.5*\l,0);
 
-    \draw (0,0) node[left] {$\varphi_0$};
-    \draw (0,\d) node[above] {$\varphi_1$};
-    \draw (\d,\d) node[above] {$\varphi_2$};
-    \draw (2.5*\d,\d) node[above] {$\varphi_3$};
+    \draw (2.5*\l,\l) to (3.5*\l,\l);
+    \draw (3.5*\l,0) to (0,0);
+
+    \draw (0,\l) node[above] {$\varphi_1$};
+    \draw (\l,\l) node[above] {$\varphi_2$};
+    \draw (2.5*\l,\l) node[above] {$\varphi_3$};
 \end{tikzpicture}

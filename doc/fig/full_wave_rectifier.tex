@@ -4,7 +4,7 @@
     \def\h{2.8};
 
     \draw (0,0) node[ground] {};
-    \draw (0,0) to[I=$i_\mr{s}$, *-*] (0,\h);
+    \draw (0,0) to[I=$i_\mr{s}$, -*] (0,\h);
     \draw (0.25*\l,0) node[transformer core, anchor=A2] (T) {};
     \draw (T.base) node {$\mr{T}_{12}$};
     \draw (T.B2) node[ground] {};
@@ -14,7 +14,6 @@
     \draw (0,0) to (T.A2);
     \draw (T.B1) to[short, i<=$i_{\mr{L}_2}$] ++(left:0.3*\l);
     \draw (T.B1) node[circ] {};
-    \draw (T.B2) node[circ] {};
 
     \draw (1.5*\l,\h) to[Do=$\mr{D}_{1-4}$, -*] (2.5*\l,\h);
     \draw (1.5*\l,0.66*\h) to[Do] (2.5*\l,0.66*\h);

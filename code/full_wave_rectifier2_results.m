@@ -353,9 +353,11 @@ if (plot_consistency)
 
     semilogy(t, e_s, t, eh, t, eb);
 
+    return
+
     filename = 'fwr2_solution.csv';
-    csvwrite(filename, [t'; xt_Q; xt_Q_p; xb; xb_p; xb_r]);
+    csvwrite(filename, [t'; xt_Q; xt_Q_p; xb; xb_p; xb_r]');
 
     filename = 'fwr2_consistency.csv';
-    csvwrite(filename, [t'; e_s; eh; eb]);
+    csvwrite(filename, [t'; e_s; eh; eb]');
 end

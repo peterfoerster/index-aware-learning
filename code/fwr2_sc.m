@@ -46,6 +46,10 @@ Pb = Vb = sym([[0, 0]; [1, 0]; [0, 1]]);
 Qt = null(Wb.' * Kb_P);
 Pt = sym([0; 1; 0]);
 
+% DAE well determined
+Wb.' * Kb_P * Pt
+return
+
 Wt = null((Mt * Qt).');
 Wt = [0; -L_2; L_12];
 Vt = [[1, 0]; [0, L_2]; [0 L_12]];

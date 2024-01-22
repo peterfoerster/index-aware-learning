@@ -1,19 +1,21 @@
+\newcommand{\datpath}{../../code/dat/do}
+
 \begin{tikzpicture}
     \begin{semilogyaxis}[
         xlabel={\# samples $N_D$},
         ylabel={relative prediction error $e$},
-        % legend entries={$\varphi_3$, $\varphi_2$, $i_\mathrm{L}$},
+        % legend entries={$\varphi_3$, $\varphi_2$, $i_\mr{L}$},
         legend entries={$\varphi_3$, $\varphi_2$},
         legend pos=north east
         ]
 
-        % index 1
-        % \addplot[color=TUDa-1a, mark=*, mark size=2pt, thick] table {do1_convergence_phi_3.dat};
-        % \addplot[color=TUDa-9a, mark=triangle*, mark size=2pt, thick] table {do1_convergence_phi_2.dat};
-        % \addplot[color=TUDa-6a, mark=square*, mark size=2pt, thick] table {do1_convergence_i_L.dat};
+        % do1
+        % \addplot[color=TUDa-1a, mark=*, mark size=2pt, thick] table {\datpath/do1_convergence_phi_3.dat};
+        % \addplot[color=TUDa-9a, mark=triangle*, mark size=2pt, thick] table {\datpath/do1_convergence_phi_2.dat};
+        % \addplot[color=TUDa-6a, mark=square*, mark size=2pt, thick] table {\datpath/do1_convergence_i_L.dat};
 
-        % index 2
-        \addplot[color=TUDa-1a, mark=*, mark size=2pt, thick] table {dat/do2_convergence_phi_3.dat};
-        \addplot[color=TUDa-9a, mark=triangle*, mark size=2pt, thick] table {dat/do2_convergence_phi_2.dat};
+        % do2
+        \addplot[color=TUDa-1a, mark=*, mark size=2pt, thick] table {\datpath/do2_convergence_phi_3.dat};
+        \addplot[color=TUDa-9a, mark=triangle*, mark size=2pt, thick] table {\datpath/do2_convergence_phi_2.dat};
     \end{semilogyaxis}
 \end{tikzpicture}

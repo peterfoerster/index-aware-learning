@@ -1,34 +1,32 @@
+\newcommand{\datpath}{../../code/dat/do}
+\newcommand{\csvpath}{../../code/csv/fwr2}
+
 \begin{tikzpicture}
-    % index 1
+    % do1
     % \begin{axis}[
     %     xlabel={$t$ (ms)},
     %     ylabel={$\varphi$ (V)}
     %     ]
 
-    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {do1_solution_phi_3.dat};
-    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}]
-    %     {do1_solution_phi_2.dat};
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {\datpath/do1_solution_phi_3.dat};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {\datpath/do1_solution_phi_2.dat};
 
     %     \addlegendentry{$\varphi_3$};
     %     \addlegendimage{color=TUDa-1a, thick};
 
     %     \addlegendentry{$\varphi_2$};
     %     \addlegendimage{color=TUDa-9a, dashed, thick};
-
-    %     % [spy using outlines={rectangle, magnification=5, connect spies}]
-    %     % \spy[rectangle, width=1.5cm, height=0.5cm] on (3,5.2) in node at (1,1);
     % \end{axis}
 
     % i_L
     % \begin{axis}[
     %     xlabel={$t$ (ms)},
-    %     ylabel={$i_\mathrm{L}$ (mA)}
+    %     ylabel={$i_\mr{L}$ (mA)}
     %     ]
 
-    %     \addplot[color=TUDa-6a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}*1e3]
-    %     {do1_solution_i_L.dat};
+    %     \addplot[color=TUDa-6a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}*1e3] {\datpath/do1_solution_i_L.dat};
 
-    %     \addlegendentry{$i_\mathrm{L}$};
+    %     \addlegendentry{$i_\mr{L}$};
     %     \addlegendimage{color=TUDa-6a, thick};
     % \end{axis}
 
@@ -38,7 +36,7 @@
     %     ylabel={difference (V)}
     %     ]
 
-    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}] {do1_solution_phi_3.dat};
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}] {\datpath/do1_solution_phi_3.dat};
 
     %     \addlegendentry{$\hat{\varphi}_3 - \varphi_3$};
     %     \addlegendimage{color=TUDa-1a, thick};
@@ -50,10 +48,9 @@
     %     ylabel={difference (mA)}
     %     ]
 
-    %     \addplot[color=TUDa-6a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}*1e3]
-    %     {do1_solution_i_L.dat};
+    %     \addplot[color=TUDa-6a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}*1e3] {\datpath/do1_solution_i_L.dat};
 
-    %     \addlegendentry{$\hat{i}_\mathrm{L} - i_\mathrm{L}$};
+    %     \addlegendentry{$\hat{i}_\mr{L} - i_\mr{L}$};
     %     \addlegendimage{color=TUDa-6a, thick};
     % \end{axis}
 
@@ -63,8 +60,8 @@
     %     ylabel={difference (V)}
     %     ]
 
-    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}] {do1_solution_phi_2.dat};
-    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_5}]{do1_solution_phi_2.dat};
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}] {\datpath/do1_solution_phi_2.dat};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_5}] {\datpath/do1_solution_phi_2.dat};
 
     %     \addlegendentry{$\hat{\varphi}_2 - \varphi_2$};
     %     \addlegendimage{color=TUDa-1a, thick};
@@ -80,8 +77,8 @@
     %     % legend style={fill=none}
     %     ]
 
-    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {dat/do1_consistency.dat};
-    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_2}]{dat/do1_consistency.dat};
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {\datpath/do1_consistency.dat};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_2}]{\datpath/do1_consistency.dat};
 
     %     \addlegendentry{$\hat{e}(t)$};
     %     \addlegendimage{color=TUDa-1a, thick};
@@ -90,14 +87,14 @@
     %     \addlegendimage{color=TUDa-9a, dashed, thick};
     % \end{semilogyaxis}
 
-    % index 2
+    % do2
     % \begin{axis}[
     %     xlabel={$t$ (ms)},
     %     ylabel={$\varphi$ (V)}
     %     ]
 
-    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {dat/do2_solution_phi_3.dat};
-    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {dat/do2_solution_phi_2.dat};
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {\datpath/do2_solution_phi_3.dat};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {\datpath/do2_solution_phi_2.dat};
 
     %     \addlegendentry{$\varphi_3$};
     %     \addlegendimage{color=TUDa-1a, thick};
@@ -112,7 +109,7 @@
     %     ylabel={difference (V)}
     %     ]
 
-    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}] {do2_solution_phi_3.dat};
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}] {\datpath/do2_solution_phi_3.dat};
 
     %     \addlegendentry{$\hat{\varphi}_3 - \varphi_3$};
     %     \addlegendimage{color=TUDa-1a, thick};
@@ -124,8 +121,8 @@
     %     ylabel={difference (V)}
     %     ]
 
-    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}] {dat/do2_solution_phi_2.dat};
-    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_5}] {dat/do2_solution_phi_2.dat};
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_3}] {\datpath/do2_solution_phi_2.dat};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_5}] {\datpath/do2_solution_phi_2.dat};
 
     %     \addlegendentry{$\hat{\varphi}_2 - \varphi_2$};
     %     \addlegendimage{color=TUDa-1a, thick};
@@ -135,22 +132,135 @@
     % \end{axis}
 
     % e_c, e_r
-    \begin{semilogyaxis}[
-        xlabel={$t$ (ms)},
-        ylabel={consistency error (V)}
-        ]
+    % \begin{semilogyaxis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={consistency error (V)}
+    %     ]
 
-        \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {dat/do2_consistency.dat};
-        \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_2}]{dat/do2_consistency.dat};
-        \addplot[color=TUDa-6a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}]{dat/do2_euler_consistency.dat};
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}] {\datpath/do2_consistency.dat};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_2}]{\datpath/do2_consistency.dat};
+    %     % \addplot[color=TUDa-6a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{x_1}]{\datpath/do2_euler_consistency.dat};
 
-        \addlegendentry{$\hat{e}(t)$};
-        \addlegendimage{color=TUDa-1a, thick};
+    %     \addlegendentry{$\hat{e}(t)$};
+    %     \addlegendimage{color=TUDa-1a, thick};
 
-        \addlegendentry{$\bar{e}(t)$};
-        \addlegendimage{color=TUDa-9a, dashed, thick};
+    %     \addlegendentry{$\bar{e}(t)$};
+    %     \addlegendimage{color=TUDa-9a, dashed, thick};
 
-        \addlegendentry{$\check{e}(t)$};
-        \addlegendimage{color=TUDa-6a, dotted, thick};
-    \end{semilogyaxis}
+    %     % \addlegendentry{$\check{e}(t)$};
+    %     % \addlegendimage{color=TUDa-6a, dotted, thick};
+    % \end{semilogyaxis}
+
+    % fwr2
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={$\varphi$ (V)},
+    %     table/col sep=comma
+    %     ]
+
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{xt_Q_1}] {\csvpath/fwr2_solution.csv};
+
+    %     \addlegendentry{$v_{34}$};
+    %     \addlegendimage{color=TUDa-1a, thick};
+    % \end{axis}
+
+    % phi
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={$\varphi$ (V)},
+    %     table/col sep=comma
+    %     ]
+
+    %     \addplot[color=TUDa-9a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{xb_P_1}] {\csvpath/fwr2_solution.csv};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{xb_P_2}] {\csvpath/fwr2_solution.csv};
+    %     \addplot[color=TUDa-9a, dotted, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{xb_Q}] {\csvpath/fwr2_solution.csv};
+
+    %     \addlegendentry{$\varphi_2$};
+    %     \addlegendimage{color=TUDa-9a, thick};
+    %     \addlegendentry{$\varphi_4$};
+    %     \addlegendimage{color=TUDa-9a, dashed, thick};
+    %     \addlegendentry{$\varphi_1$};
+    %     \addlegendimage{color=TUDa-9a, dotted, thick};
+    % \end{axis}
+
+    % i_L_1
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={$i_\mr{L}$ (mA)},
+    %     table/col sep=comma
+    %     ]
+
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{xt_Q_2}*1e3] {\csvpath/fwr2_solution.csv};
+
+    %     \addlegendentry{$i_{\mr{L}_2}$};
+    %     \addlegendimage{color=TUDa-1a, thick};
+    % \end{axis}
+
+    % i_L_2
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={$i_\mr{L}$ (mA)},
+    %     table/col sep=comma
+    %     ]
+
+    %     \addplot[color=TUDa-9a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{xt_P}*1e3] {\csvpath/fwr2_solution.csv};
+
+    %     \addlegendentry{$i_{\mr{L}_1}$};
+    %     \addlegendimage{color=TUDa-9a, thick};
+    % \end{axis}
+
+    % phi
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={difference (V)},
+    %     table/col sep=comma
+    %     ]
+
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{xt_Q_p_1}-\thisrow{xt_Q_1}] {\csvpath/fwr2_solution.csv};
+    %     \addplot[color=TUDa-9a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{xb_P_p_1}-\thisrow{xb_P_1}] {\csvpath/fwr2_solution.csv};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{xb_P_p_2}-\thisrow{xb_P_2}] {\csvpath/fwr2_solution.csv};
+    %     \addplot[color=TUDa-9a, dotted, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{xb_Q_p}-\thisrow{xb_Q}] {\csvpath/fwr2_solution.csv};
+
+    %     \addlegendentry{$\hat{v}_{34} - v_{34}$};
+    %     \addlegendimage{color=TUDa-1a, thick};
+    %     \addlegendentry{$\hat{\varphi}_2 - \varphi_2$};
+    %     \addlegendimage{color=TUDa-9a, thick};
+    %     \addlegendentry{$\hat{\varphi}_4 - \varphi_4$};
+    %     \addlegendimage{color=TUDa-9a, dashed, thick};
+    %     \addlegendentry{$\hat{\varphi}_1 - \varphi_1$};
+    %     \addlegendimage{color=TUDa-9a, dotted, thick};
+    % \end{axis}
+
+    % i_L
+    % \begin{axis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={difference (mA)},
+    %     table/col sep=comma
+    %     ]
+
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=(\thisrow{xt_Q_p_2}-\thisrow{xt_Q_2})*1e3] {\csvpath/fwr2_solution.csv};
+    %     \addplot[color=TUDa-9a, thick] table[x expr=\thisrow{t}*1e3, y expr=(\thisrow{xt_P_p}-\thisrow{xt_P})*1e3] {\csvpath/fwr2_solution.csv};
+
+    %     \addlegendentry{$\hat{i}_{\mr{L}_2} - i_{\mr{L}_2}$};
+    %     \addlegendimage{color=TUDa-1a, thick};
+    %     \addlegendentry{$\hat{i}_{\mr{L}_1} - i_{\mr{L}_1}$};
+    %     \addlegendimage{color=TUDa-9a, thick};
+    % \end{axis}
+
+    % eh, eb
+    % \begin{semilogyaxis}[
+    %     xlabel={$t$ (ms)},
+    %     ylabel={consistency error (V)},
+    %     table/col sep=comma
+    %     ]
+
+    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{eh}] {\csvpath/fwr2_consistency.csv};
+    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{eb}]{\csvpath/fwr2_consistency.csv};
+
+    %     \addlegendentry{$\hat{e}(t)$};
+    %     \addlegendimage{color=TUDa-1a, thick};
+
+    %     \addlegendentry{$\bar{e}(t)$};
+    %     \addlegendimage{color=TUDa-9a, dashed, thick};
+    % \end{semilogyaxis}
 \end{tikzpicture}

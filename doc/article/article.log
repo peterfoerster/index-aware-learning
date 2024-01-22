@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/CVE-2023-32700 patched)  (format=lualatex 2023.12.3)  11 DEC 2023 11:10
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/CVE-2023-32700 patched)  (format=lualatex 2023.12.3)  22 JAN 2024 15:20
  system commands enabled.
 **article
 (./article.tex
@@ -1625,11 +1625,6 @@ zlibraryfpu.code.tex)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex))
-(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
-\c@subfigure=\count473
-\c@subtable=\count474
-)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibrar
 yexternal.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
@@ -1643,60 +1638,60 @@ LaTeX Warning: Unused global option(s):
 (./article.aux)
 \openout1 = article.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
-5.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
+3.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 43.
 LaTeX Font Info:    Trying to load font information for LS1+stix on input line 
-35.
+43.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 43.
 LaTeX Font Info:    Trying to load font information for LS2+stix on input line 
-35.
+43.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd
 File: ls2stix.fd 2015/04/17 v1.1.2-latex STIX LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    ... okay on input line 43.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count475
+\scratchcounter=\count473
 \scratchdimen=\dimen437
 \scratchbox=\box149
-\nofMPsegments=\count476
-\nofMParguments=\count477
+\nofMPsegments=\count474
+\nofMParguments=\count475
 \everyMPshowfont=\toks66
-\MPscratchCnt=\count478
+\MPscratchCnt=\count476
 \MPscratchDim=\dimen438
-\MPnumerator=\count479
-\makeMPintoPDFobject=\count480
+\MPnumerator=\count477
+\makeMPintoPDFobject=\count478
 \everyMPtoPDFconversion=\toks67
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1720,7 +1715,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 35.
+Package hyperref Info: Link coloring OFF on input line 43.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1758,14 +1753,14 @@ Package hyperref Info: Link coloring OFF on input line 35.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Command `\dddot' is already robust on input line 35.
-LaTeX Info: Command `\ddddot' is already robust on input line 35.
-\c@lstlisting=\count481
+LaTeX Info: Command `\dddot' is already robust on input line 43.
+LaTeX Info: Command `\ddddot' is already robust on input line 43.
+\c@lstlisting=\count479
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 35.
+ on input line 43.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictio
@@ -1774,57 +1769,57 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 35.
+or `english'. on input line 43.
 LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 54.
+ne 63.
  (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixex on input lin
-e 54.
+e 63.
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd
 File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input l
-ine 54.
+ine 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd
 File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixbb on input lin
-e 54.
+e 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd
 File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixcal on input li
-ne 54.
+ne 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd
 File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
 ons
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixsf on input lin
-e 54.
+e 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd
 File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixtt on input lin
-e 54.
+e 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 
 )
-Overfull \hbox (346.99213pt too wide) in paragraph at lines 54--54
+Overfull \hbox (346.99213pt too wide) in paragraph at lines 63--63
 [][] | || []|[][] 
  []
 
-LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 54
+LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 63
 .
 
 Overfull \vbox (6.46347pt too high) has occurred while \output is active []
@@ -1836,190 +1831,224 @@ Overfull \vbox (6.46347pt too high) has occurred while \output is active []
 \openout3 = article.pag
 ] [2
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.2
-.1'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.2
 .2'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.2
 .3'
-] [3] [4
+]
+<vcr.pdf, id=79, 163.61125pt x 87.32625pt>
+File: vcr.pdf Graphic file (type pdf)
+<use vcr.pdf>
+Package luatex.def Info: vcr.pdf  used on input line 144.
+(luatex.def)             Requested size: 177.63084pt x 94.8093pt.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.2
+.1'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.2
+.2'
+[3<./vcr.pdf>]
+
+Package hyperref Warning: No autoref name for `Appendix' on input line 198.
+
+[4] [5
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
 .1'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
 .2'
 ]
-<do1.pdf, id=144, 251.4173pt x 94.15175pt>
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
+.1'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
+.2'
+<do1.pdf, id=202, 257.96375pt x 93.34875pt>
 File: do1.pdf Graphic file (type pdf)
 <use do1.pdf>
-Package luatex.def Info: do1.pdf  used on input line 268.
-(luatex.def)             Requested size: 253.75394pt x 95.02928pt.
- [5
+Package luatex.def Info: do1.pdf  used on input line 294.
+(luatex.def)             Requested size: 253.75394pt x 91.82869pt.
+[6<./do1.pdf>]
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
 .1'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
 .2'
-]
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
-.1'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
-.2'
-<do2.pdf, id=162, 238.90756pt x 94.15175pt>
+<do2.pdf, id=230, 241.90375pt x 93.34875pt>
 File: do2.pdf Graphic file (type pdf)
 <use do2.pdf>
-Package luatex.def Info: do2.pdf  used on input line 403.
-(luatex.def)             Requested size: 253.75394pt x 100.00148pt.
-[6<./do1.pdf>] [7<./do2.pdf>]
-<ial.pdf, id=241, 321.02736pt x 134.92006pt>
+Package luatex.def Info: do2.pdf  used on input line 428.
+(luatex.def)             Requested size: 253.75394pt x 97.92648pt.
+[7<./do2.pdf>]
+<ial.pdf, id=255, 328.22626pt x 131.49126pt>
 File: ial.pdf Graphic file (type pdf)
 <use ial.pdf>
-Package luatex.def Info: ial.pdf  used on input line 504.
-(luatex.def)             Requested size: 355.25395pt x 149.31627pt.
+Package luatex.def Info: ial.pdf  used on input line 519.
+(luatex.def)             Requested size: 355.25395pt x 142.32141pt.
  [8<./ial.pdf>] [9]
-<do1_solution_phi.pdf, id=298, 238.68773pt x 194.36214pt>
+<do1_solution_phi.pdf, id=310, 234.8775pt x 189.70876pt>
 File: do1_solution_phi.pdf Graphic file (type pdf)
 <use do1_solution_phi.pdf>
-Package luatex.def Info: do1_solution_phi.pdf  used on input line 573.
-(luatex.def)             Requested size: 203.00005pt x 165.31238pt.
-<do1_solution_i_L.pdf, id=299, 238.68773pt x 194.38522pt>
+Package luatex.def Info: do1_solution_phi.pdf  used on input line 605.
+(luatex.def)             Requested size: 203.00005pt x 163.96265pt.
+<do1_solution_i_L.pdf, id=311, 235.88126pt x 189.70876pt>
 File: do1_solution_i_L.pdf Graphic file (type pdf)
 <use do1_solution_i_L.pdf>
-Package luatex.def Info: do1_solution_i_L.pdf  used on input line 573.
-(luatex.def)             Requested size: 203.00005pt x 165.33202pt.
-<do1_convergence.pdf, id=300, 238.29828pt x 193.59627pt>
+Package luatex.def Info: do1_solution_i_L.pdf  used on input line 605.
+(luatex.def)             Requested size: 203.00005pt x 163.26501pt.
+<do1_convergence.pdf, id=316, 235.88126pt x 190.7125pt>
 File: do1_convergence.pdf Graphic file (type pdf)
 <use do1_convergence.pdf>
-Package luatex.def Info: do1_convergence.pdf  used on input line 581.
-(luatex.def)             Requested size: 203.00005pt x 164.91798pt.
-<do1_error_phi_3.pdf, id=306, 238.68773pt x 205.51079pt>
+Package luatex.def Info: do1_convergence.pdf  used on input line 613.
+(luatex.def)             Requested size: 203.00005pt x 164.12885pt.
+ [10]
+<do1_error_phi_3.pdf, id=339, 234.8775pt x 201.75375pt>
 File: do1_error_phi_3.pdf Graphic file (type pdf)
 <use do1_error_phi_3.pdf>
-Package luatex.def Info: do1_error_phi_3.pdf  used on input line 589.
-(luatex.def)             Requested size: 203.00005pt x 174.79472pt.
-<do1_error_i_L.pdf, id=307, 238.68773pt x 205.51581pt>
+Package luatex.def Info: do1_error_phi_3.pdf  used on input line 622.
+(luatex.def)             Requested size: 203.00005pt x 174.37297pt.
+<do1_error_i_L.pdf, id=340, 234.8775pt x 201.75375pt>
 File: do1_error_i_L.pdf Graphic file (type pdf)
 <use do1_error_i_L.pdf>
-Package luatex.def Info: do1_error_i_L.pdf  used on input line 589.
-(luatex.def)             Requested size: 203.00005pt x 174.799pt.
- [10<./do1_solution_phi.pdf><./do1_solution_i_L.pdf><./do1_convergence.pdf>]
-<do1_error_phi_2.pdf, id=430, 238.68773pt x 205.51881pt>
+Package luatex.def Info: do1_error_i_L.pdf  used on input line 622.
+(luatex.def)             Requested size: 203.00005pt x 174.37297pt.
+ [11<./do1_solution_phi.pdf><./do1_solution_i_L.pdf><./do1_convergence.pdf>]
+<do1_error_phi_2.pdf, id=397, 234.8775pt x 201.75375pt>
 File: do1_error_phi_2.pdf Graphic file (type pdf)
 <use do1_error_phi_2.pdf>
-Package luatex.def Info: do1_error_phi_2.pdf  used on input line 597.
-(luatex.def)             Requested size: 203.00005pt x 174.80156pt.
-<do1_consistency.pdf, id=431, 238.68773pt x 194.37619pt>
+Package luatex.def Info: do1_error_phi_2.pdf  used on input line 630.
+(luatex.def)             Requested size: 203.00005pt x 174.37297pt.
+<do1_consistency.pdf, id=398, 235.88126pt x 189.70876pt>
 File: do1_consistency.pdf Graphic file (type pdf)
 <use do1_consistency.pdf>
-Package luatex.def Info: do1_consistency.pdf  used on input line 597.
-(luatex.def)             Requested size: 203.00005pt x 165.32433pt.
- [11<./do1_error_phi_3.pdf><./do1_error_i_L.pdf><./do1_error_phi_2.pdf><./do1_co
+Package luatex.def Info: do1_consistency.pdf  used on input line 630.
+(luatex.def)             Requested size: 203.00005pt x 163.26501pt.
+ [12<./do1_error_phi_3.pdf><./do1_error_i_L.pdf><./do1_error_phi_2.pdf><./do1_co
 nsistency.pdf>]
-<do2_solution_phi.pdf, id=595, 238.68773pt x 194.3772pt>
+<do2_solution_phi.pdf, id=490, 234.8775pt x 189.70876pt>
 File: do2_solution_phi.pdf Graphic file (type pdf)
 <use do2_solution_phi.pdf>
-Package luatex.def Info: do2_solution_phi.pdf  used on input line 620.
-(luatex.def)             Requested size: 203.00005pt x 165.3252pt.
-<do2_convergence.pdf, id=596, 238.30128pt x 193.59627pt>
+Package luatex.def Info: do2_solution_phi.pdf  used on input line 653.
+(luatex.def)             Requested size: 203.00005pt x 163.96265pt.
+<do2_convergence.pdf, id=491, 235.88126pt x 190.7125pt>
 File: do2_convergence.pdf Graphic file (type pdf)
 <use do2_convergence.pdf>
-Package luatex.def Info: do2_convergence.pdf  used on input line 620.
-(luatex.def)             Requested size: 203.00005pt x 164.91798pt.
-<do2_error_phi_3.pdf, id=598, 238.68773pt x 205.5138pt>
+Package luatex.def Info: do2_convergence.pdf  used on input line 653.
+(luatex.def)             Requested size: 203.00005pt x 164.12885pt.
+<do2_error_phi_3.pdf, id=496, 234.8775pt x 201.75375pt>
 File: do2_error_phi_3.pdf Graphic file (type pdf)
 <use do2_error_phi_3.pdf>
-Package luatex.def Info: do2_error_phi_3.pdf  used on input line 629.
-(luatex.def)             Requested size: 203.00005pt x 174.7973pt.
-<do2_error_phi_2.pdf, id=599, 238.68773pt x 205.5138pt>
+Package luatex.def Info: do2_error_phi_3.pdf  used on input line 662.
+(luatex.def)             Requested size: 203.00005pt x 174.37297pt.
+<do2_error_phi_2.pdf, id=497, 234.8775pt x 201.75375pt>
 File: do2_error_phi_2.pdf Graphic file (type pdf)
 <use do2_error_phi_2.pdf>
-Package luatex.def Info: do2_error_phi_2.pdf  used on input line 629.
-(luatex.def)             Requested size: 203.00005pt x 174.7973pt.
-<do2_consistency.pdf, id=602, 238.68773pt x 194.37619pt>
+Package luatex.def Info: do2_error_phi_2.pdf  used on input line 662.
+(luatex.def)             Requested size: 203.00005pt x 174.37297pt.
+ [13<./do2_solution_phi.pdf><./do2_convergence.pdf>]
+<do2_consistency.pdf, id=543, 235.88126pt x 189.70876pt>
 File: do2_consistency.pdf Graphic file (type pdf)
 <use do2_consistency.pdf>
-Package luatex.def Info: do2_consistency.pdf  used on input line 637.
-(luatex.def)             Requested size: 203.00005pt x 165.32433pt.
- [12<./do2_solution_phi.pdf><./do2_convergence.pdf>] [13<./do2_error_phi_3.pdf><
-./do2_error_phi_2.pdf><./do2_consistency.pdf>]
-<do2_euler_phi_3.pdf, id=800, 238.68773pt x 205.5178pt>
-File: do2_euler_phi_3.pdf Graphic file (type pdf)
-<use do2_euler_phi_3.pdf>
-Package luatex.def Info: do2_euler_phi_3.pdf  used on input line 663.
-(luatex.def)             Requested size: 203.00005pt x 174.80072pt.
-<do2_euler_phi_2.pdf, id=801, 238.68773pt x 205.5178pt>
-File: do2_euler_phi_2.pdf Graphic file (type pdf)
-<use do2_euler_phi_2.pdf>
-Package luatex.def Info: do2_euler_phi_2.pdf  used on input line 663.
-(luatex.def)             Requested size: 203.00005pt x 174.80072pt.
- [14<./do2_euler_phi_3.pdf><./do2_euler_phi_2.pdf>] (../fig/full_wave_rectifier
-.tex
-===== Image 'article-figure0' is up-to-date. ======
-) [15] [16]
-Overfull \vbox (196.77103pt too high) has occurred while \output is active []
-
-
-[17<./article-figure0.pdf>] (../fig/full_wave_rectifier.tex
-===== Image 'article-figure1' is up-to-date. ======
-) (./article.bbl [18] [19]
-Overfull \vbox (196.77103pt too high) has occurred while \output is active []
-
-
-[20<./article-figure1.pdf>]) [21]
-<cortes.jpg, id=965, 231.7458pt x 308.352pt>
+Package luatex.def Info: do2_consistency.pdf  used on input line 683.
+(luatex.def)             Requested size: 203.00005pt x 163.26501pt.
+<fwr2.pdf, id=546, 237.88875pt x 117.43875pt>
+File: fwr2.pdf Graphic file (type pdf)
+<use fwr2.pdf>
+Package luatex.def Info: fwr2.pdf  used on input line 692.
+(luatex.def)             Requested size: 253.75394pt x 125.2765pt.
+<fwr2_solution_v34.pdf, id=547, 234.8775pt x 201.75375pt>
+File: fwr2_solution_v34.pdf Graphic file (type pdf)
+<use fwr2_solution_v34.pdf>
+Package luatex.def Info: fwr2_solution_v34.pdf  used on input line 700.
+(luatex.def)             Requested size: 203.00005pt x 174.37297pt.
+<fwr2_solution_i_L_1.pdf, id=548, 235.88126pt x 189.70876pt>
+File: fwr2_solution_i_L_1.pdf Graphic file (type pdf)
+<use fwr2_solution_i_L_1.pdf>
+Package luatex.def Info: fwr2_solution_i_L_1.pdf  used on input line 700.
+(luatex.def)             Requested size: 203.00005pt x 163.26501pt.
+ [14<./do2_error_phi_3.pdf><./do2_error_phi_2.pdf><./do2_consistency.pdf>]
+<fwr2_solution_phi.pdf, id=615, 237.88875pt x 189.70876pt>
+File: fwr2_solution_phi.pdf Graphic file (type pdf)
+<use fwr2_solution_phi.pdf>
+Package luatex.def Info: fwr2_solution_phi.pdf  used on input line 719.
+(luatex.def)             Requested size: 203.00005pt x 161.89293pt.
+<fwr2_solution_i_L_2.pdf, id=616, 235.88126pt x 189.70876pt>
+File: fwr2_solution_i_L_2.pdf Graphic file (type pdf)
+<use fwr2_solution_i_L_2.pdf>
+Package luatex.def Info: fwr2_solution_i_L_2.pdf  used on input line 719.
+(luatex.def)             Requested size: 203.00005pt x 163.26501pt.
+ [15<./fwr2.pdf><./fwr2_solution_v34.pdf><./fwr2_solution_i_L_1.pdf>]
+<fwr2_error_phi.pdf, id=670, 234.8775pt x 201.75375pt>
+File: fwr2_error_phi.pdf Graphic file (type pdf)
+<use fwr2_error_phi.pdf>
+Package luatex.def Info: fwr2_error_phi.pdf  used on input line 727.
+(luatex.def)             Requested size: 203.00005pt x 174.37297pt.
+<fwr2_error_i_L.pdf, id=671, 234.8775pt x 201.75375pt>
+File: fwr2_error_i_L.pdf Graphic file (type pdf)
+<use fwr2_error_i_L.pdf>
+Package luatex.def Info: fwr2_error_i_L.pdf  used on input line 727.
+(luatex.def)             Requested size: 203.00005pt x 174.37297pt.
+ [16<./fwr2_solution_phi.pdf><./fwr2_solution_i_L_2.pdf><./fwr2_error_phi.pdf><.
+/fwr2_error_i_L.pdf>]
+<fwr2_consistency.pdf, id=768, 235.88126pt x 189.70876pt>
+File: fwr2_consistency.pdf Graphic file (type pdf)
+<use fwr2_consistency.pdf>
+Package luatex.def Info: fwr2_consistency.pdf  used on input line 755.
+(luatex.def)             Requested size: 203.00005pt x 163.26501pt.
+ [17<./fwr2_consistency.pdf>] [18]
+(./article.bbl [19]) [20]
+<cortes.jpg, id=827, 231.7458pt x 308.352pt>
 File: cortes.jpg Graphic file (type jpg)
 <use cortes.jpg>
-Package luatex.def Info: cortes.jpg  used on input line 735.
+Package luatex.def Info: cortes.jpg  used on input line 886.
 (luatex.def)             Requested size: 65.99872pt x 85.9992pt.
 File: cortes.jpg Graphic file (type jpg)
 <use cortes.jpg>
-Package luatex.def Info: cortes.jpg  used on input line 735.
+Package luatex.def Info: cortes.jpg  used on input line 886.
 (luatex.def)             Requested size: 65.99872pt x 85.9992pt.
 
 warning  (file forster.jpg) (readjpg): Exif resolution 300dpi x 300dpi differs f
 rom the input resolution 299dpi x 299dpi
-<forster.jpg, id=966, 99.4917pt x 127.9179pt>
+<forster.jpg, id=828, 99.4917pt x 127.9179pt>
 File: forster.jpg Graphic file (type jpg)
 <use forster.jpg>
-Package luatex.def Info: forster.jpg  used on input line 738.
+Package luatex.def Info: forster.jpg  used on input line 889.
 (luatex.def)             Requested size: 66.00325pt x 86.00122pt.
 File: forster.jpg Graphic file (type jpg)
 <use forster.jpg>
-Package luatex.def Info: forster.jpg  used on input line 738.
+Package luatex.def Info: forster.jpg  used on input line 889.
 (luatex.def)             Requested size: 66.00325pt x 86.00122pt.
-<jansen.jpg, id=967, 284.56313pt x 369.84172pt>
+<jansen.jpg, id=829, 284.56313pt x 369.84172pt>
 File: jansen.jpg Graphic file (type jpg)
 <use jansen.jpg>
-Package luatex.def Info: jansen.jpg  used on input line 741.
+Package luatex.def Info: jansen.jpg  used on input line 892.
 (luatex.def)             Requested size: 65.99957pt x 85.9986pt.
 File: jansen.jpg Graphic file (type jpg)
 <use jansen.jpg>
-Package luatex.def Info: jansen.jpg  used on input line 741.
+Package luatex.def Info: jansen.jpg  used on input line 892.
 (luatex.def)             Requested size: 65.99957pt x 85.9986pt.
 
 warning  (file schilders.jpg) (readjpg): Bad Exif resolution 0dpi x 0dpi (zero o
 r negative value of a signed integer)
-<schilders.jpg, id=968, 495.56572pt x 660.75429pt>
+<schilders.jpg, id=830, 495.56572pt x 660.75429pt>
 File: schilders.jpg Graphic file (type jpg)
 <use schilders.jpg>
-Package luatex.def Info: schilders.jpg  used on input line 744.
+Package luatex.def Info: schilders.jpg  used on input line 895.
 (luatex.def)             Requested size: 65.99863pt x 85.9918pt.
 File: schilders.jpg Graphic file (type jpg)
 <use schilders.jpg>
-Package luatex.def Info: schilders.jpg  used on input line 744.
+Package luatex.def Info: schilders.jpg  used on input line 895.
 (luatex.def)             Requested size: 65.99863pt x 85.9918pt.
-<schoeps.jpg, id=969, 99.9735pt x 128.3997pt>
+<schoeps.jpg, id=831, 99.9735pt x 128.3997pt>
 File: schoeps.jpg Graphic file (type jpg)
 <use schoeps.jpg>
-Package luatex.def Info: schoeps.jpg  used on input line 747.
+Package luatex.def Info: schoeps.jpg  used on input line 898.
 (luatex.def)             Requested size: 66.00253pt x 85.99991pt.
 File: schoeps.jpg Graphic file (type jpg)
 <use schoeps.jpg>
-Package luatex.def Info: schoeps.jpg  used on input line 747.
+Package luatex.def Info: schoeps.jpg  used on input line 898.
 (luatex.def)             Requested size: 66.00253pt x 85.99991pt.
-[22
+[21
 
 <./cortes.jpg><./forster.jpg
 warning  (readjpg): Exif resolution 300dpi x 300dpi differs from the input resol
@@ -2030,16 +2059,16 @@ warning  (readjpg): Bad Exif resolution 0dpi x 0dpi (zero or negative value of a
 ><./schoeps.jpg>] (./article.aux))
 
 Here is how much of LuaTeX's memory you used:
- 64019 strings out of 478457
- 195352,2373549 words of node,token memory allocated
- 5836 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 4 glue, 560 kern, 1 penalty, 7 glyph, 783 attribute
-, 83 glue_spec, 393 attribute_list, 2 write, 3 pdf_action nodes
-   avail lists: 1:1,2:2128,3:295,4:96,5:1136,6:71,7:12037,8:79,9:2073,10:34,11:1
-088
- 82012 multiletter control sequences out of 65536+600000
- 148 fonts using 11348263 bytes
- 114i,19n,103p,1511b,915s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 64011 strings out of 478457
+ 195350,2373549 words of node,token memory allocated
+ 6804 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 4 glue, 649 kern, 1 penalty, 2 sub_mlist, 8 glyph, 
+953 attribute, 83 glue_spec, 478 attribute_list, 2 write, 3 pdf_action nodes
+   avail lists: 1:3,2:1716,3:317,4:76,5:1127,6:70,7:12348,8:159,9:1827,10:37,11:
+1101
+ 81996 multiletter control sequences out of 65536+600000
+ 147 fonts using 11265543 bytes
+ 114i,19n,103p,1564b,963s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}</usr/share/texl
 ive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb></usr/share/texlive/te
@@ -2053,10 +2082,10 @@ mathit.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm-bo
 ld.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on article.pdf (22 pages, 3426787 bytes).
+Output written on article.pdf (21 pages, 4039213 bytes).
 
-PDF statistics: 1081 PDF objects out of 1200 (max. 8388607)
- 829 compressed objects within 9 object streams
- 103 named destinations out of 1000 (max. 131072)
- 152 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 941 PDF objects out of 1000 (max. 8388607)
+ 763 compressed objects within 8 object streams
+ 122 named destinations out of 1000 (max. 131072)
+ 144 words of extra memory for PDF output out of 10000 (max. 100000000)
 
