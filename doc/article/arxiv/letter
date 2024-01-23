@@ -1,0 +1,6 @@
+#!/bin/bash
+# lualatex letter.tex
+pdflatex letter.tex
+
+rm letter.aux
+rm letter.log

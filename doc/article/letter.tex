@@ -124,7 +124,7 @@
             \item For the topological basis functions mentioned in section 3 this might be possible, but we have not explored this in more detail.
             \item We pointed this out more explicitly in the manuscript and remarked that for sequential learning approaches, such as the one used in the paper, one can still benefit from parameters not appearing in the ODE without any explicit knowledge.\\
             ``\textcolor{red}{As of now however, we have no knowledge of an easy way to automatically determine which parameters appear in the ODE. But when combined with a sequential learning strategy, such as the one outlined in \dots, there may still be computational savings due to the learning method requiring less samples for the parameters not appearing in the ODE.}'' (p.9)
-            \item The approach is reasonable independently of this, since the two main benefits (a reduced number of variables to learn and better accuracy in the algebraic constraints) are independent of this anyhow.
+            \item The approach is also reasonable if the number of parameters cannot be reduced by the decoupling, since two significant advantages remain: better accuracy in the algebraic constraints and a reduced number of (differential) variables to learn.
         \end{itemize}
 
         \item[4)] \textcolor{TUDa-0c}{Page 12, line 32: Please explain how you reconstruct the values for $L$.}
@@ -143,7 +143,7 @@
         \begin{itemize}
             \item In principle it is possible to use any index concept that provides such a decoupling. There are however clear advantages when using the dissection index, in particular in the context of MNA, see also the answer to 5).
             \item We added a remark about this at the beginning of section 3 and also motivated the dissection index more strongly.\\
-            ``\textcolor{red}{We now focus on the dissection index. As mentioned in \dots, the key property of this index concept is that it enables the decoupling of a DAE into an ODE and a set of purely algebraic equations. This is clearly different from the perturbation index, however other index concepts such as the tractability and differentiation indices also make such a decoupling possible. Still, the dissection index maintains some advantages over these concepts, as it provides a simple algorithmic procedure for the decoupling that is similar to the tractability index, and it poses less strict smoothness assumptions. In the case of MNA without controlled sources \dots, it is even possible to find a purely topological decoupling based on the dissection index. We will not make use of this topological decoupling here however, but rather consider the dissection index for a more general class of DAEs, to formulate the assumptions that are necessary for our method to work also for DAEs other than \dots.}'' (p.4)
+            ``\textcolor{red}{We focus on the dissection index, as it enables the decoupling of a DAE into an ODE and a set of purely algebraic equations. This is conceptually different from the perturbation index, however other index concepts such as the tractability and differentiation indices also use decoupling strategies. Still, the dissection index maintains some advantages over these concepts, as it provides a simple algorithmic procedure for the decoupling that is similar to the tractability index, but poses less strict smoothness assumptions. In the case of MNA without controlled sources \dots, it is even possible to find a purely topological decoupling based on the dissection index. We will not make use of this topological decoupling in the derivation however, but rather consider the dissection index for a more general class of DAEs, to formulate the assumptions that are necessary for our method to work also for DAEs other than \dots.}'' (p.4)
         \end{itemize}
     \end{itemize}
 
@@ -165,7 +165,7 @@
             \end{align*}
             We note that this only reflects our implementation; in principle any finite difference (or similar) approximation is possible. Finally, we determine $\mbb{x}_\mb{P}(t)$ and $\mbb{x}_\mb{Q}(t)$ by jointly solving \dots\ using the learned $\mbt{x}_\mb{Q}(t)$, $\mbt{x}_\mb{P}(t)$ and the approximation of $\ddt \mbt{x}_\mb{P}(t)$.}'' (p.8-9)
 
-            \item Lastly, we removed the alternative approach (previous section 5.1) to achieve a clearer presentation of our main approach.
+            \item Lastly, we removed the alternative approach (previous section 5.1) to achieve a clearer presentation of our main message.
         \end{itemize}
 
         \item \textcolor{TUDa-0c}{Since the concept of ``Index'' is key in understanding the manuscript the authors should define it properly and not just cite existent literature.}

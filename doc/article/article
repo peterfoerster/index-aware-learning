@@ -4,6 +4,13 @@ bibtex article
 lualatex --shell-escape article
 lualatex --shell-escape article
 
+rm article.aux
+rm article.auxlock
+rm article.bbl
+rm article.blg
+rm article.log
+rm article.pag
+
 rm article-figure0.dep
 rm article-figure0.dpth
 rm article-figure0.log

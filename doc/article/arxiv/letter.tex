@@ -1,0 +1,190 @@
+\documentclass[a4paper, 10pt,
+    ]{article}
+
+\usepackage[top=1.75cm, bottom=1.75cm, left=3cm, right=3cm]{geometry}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+% font
+\usepackage[scaled=.98,sups,osf]{XCharter}
+\usepackage[scaled=1.04,varqu,varl]{inconsolata}
+\usepackage[type1]{cabin}
+\usepackage[charter,vvarbb,scaled=1.05]{newtxmath}
+\usepackage[cal=boondoxo]{mathalfa}
+\linespread{1.04}
+
+\usepackage{tuda-pgfplots}
+
+\pagestyle{empty}
+\setlength{\parindent}{0cm}
+
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\mbt}[1]{\tilde{\mathbf{#1}}}
+\newcommand{\mbb}[1]{\bar{\mathbf{#1}}}
+\newcommand{\mbh}[1]{\hat{\mathbf{#1}}}
+\newcommand{\mr}[1]{\mathrm{#1}}
+\newcommand{\T}{{\!\top}}
+\newcommand{\ddt}{\frac{\mathrm{d}}{\mathrm{d}t}}
+\newcommand{\A}[1]{\mb{A}_\mr{#1}}
+\newcommand{\AT}[1]{\mb{A}_\mr{#1}^{\T}}
+\newcommand{\qC}{\mb{q}_\mr{C}}
+\newcommand{\gR}{\mb{g}_\mr{R}}
+\newcommand{\phiL}{\boldsymbol{\phi}_\mr{L}}
+\newcommand{\vphi}{\boldsymbol{\varphi}}
+\renewcommand{\i}[1]{\mb{i}_\mr{#1}}
+\renewcommand{\v}[1]{\mb{v}_\mr{#1}}
+
+\begin{document}
+    Dear editors of the International Journal of Circuit Theory and Applications,\\
+
+    thank you for the feedback on our manuscript ``Index-aware learning of circuits". We have reviewed the comments (\textcolor{TUDa-0c}{repeated in gray}) and made changes (\textcolor{red}{highlighted in red}) in order to address the criticism and improve the paper.\\
+
+    \paragraph{Reviewing: 1}
+    \begin{itemize}
+        \item[1)] \textcolor{TUDa-0c}{Both examples are well selected from a didactic point of view. They contain constant $C$ and $L$ and present a rather trivial DAE-structure, since the basis considered in the dissection concept consist of standard unit vectors $e_i$. However, they do clarify all challenges that may appear in general. It should be explained that due to the properties of the incidence matrices, in general the ODEs have to be formulated for linear combinations of components. Moreover, for nonlinear $C$ and $G$ corresponding to multiport devices, it should be discussed if such a decoupling is still possible. On the one hand the theory should be more precise and on the other hand at least one additional larger nonlinear index-2 example with a more complex structure should be included, e.g.~a CV-loop involving several nonlinear capacitors.}
+        \begin{itemize}
+            \item We added a paragraph in section 2 to illustrate that the decoupling also works for nonlinear multiport devices.\\
+            ``\textcolor{red}{We note that \dots\ readily extends to multiport devices. A general inductive $n$-port for example, can also be modeled by a function $\phiL(\i{L}) = \big[ \phi_1(\i{L}), \dotsc, \phi_{n-1}(\i{L}) \big]^\T$, however the Jacobian is not necessarily diagonal in this case as the component functions of $\phiL$ can each depend on all the currents $\i{L} = [i_1, \cdots, i_{n-1}]^\T$. Regarding the incidence matrices, one chooses a reference node $\varphi_0$ for the multiport device and then considers $n-1$ branches from the remaining $n-1$ nodes to the reference. Interpreting the multiport as a single node and using Kirchhoff's current law then gives $i_0 = -\sum_{k=1}^{n-1} i_k$ for the reference current, when orienting all currents to point toward the device. Following this approach, there is then no difference in treating multiports compared to one-ports.}'' (p.2)
+            \item We made the mathematical presentation of the dissection index more precise, reformulating section 3 in terms of nonlinear DAEs in standard form while providing the assumptions that are necessary for our approach. We also added an appendix with remarks showing that MNA fulfills all assumptions.\\
+            ``\textcolor{red}{We consider a DAE in standard form,
+            \begin{align}
+                \mb{M}(\mb{x}) \ddt \mb{x} + \mb{K}(\mb{x}) \mb{x} + \mb{f}(t) = \mb{0}, \quad \ker \mb{M} \supsetneq \{ \mb{0} \},
+            \end{align}
+            where the matrix-valued functions $\mb{M}$ and $\mb{K}$ are derived from \dots\ by defining
+            \begin{align*}
+                \mb{M}(\mb{x}) = \mb{J}_{\mb{x}'} \big( \mb{F}(\mb{x}', \mb{x}, t) \big), \quad \mb{K}(\mb{x}) = \mb{J}_{\mb{x}} \big( \mb{F}(\mb{x}', \mb{x}, t) \big).
+            \end{align*}
+            Note that the description of MNA in \dots\ is precisely of this form. In the following, we will demonstrate the first two steps of the dissection index when applied to systems of the form of \dots, while stating the assumptions of our approach. Appendix \dots\ contains additional remarks showing that these assumptions are fulfilled by \dots.}'' (p.4)\\
+            See also Assumption 1 (p.4), Assumption 2 and Assumption 3 (p.5) as well as Remark 2 (p.19).\\
+            ``\textcolor{red}{Again recalling \dots\ we observe
+            \begin{align*}
+                \mb{K}(\mb{x}) = \begin{bmatrix}
+                    \A{R}^{\phantom{\T}} \mb{G} \big( \AT{R} \vphi \big) \AT{R} & \A{L} & \A{V}\\
+                    -\AT{L} & &\\
+                    -\AT{V} & &
+                \end{bmatrix}.
+            \end{align*}
+            Noting that $\mb{W} = \mb{Q}$ for MNA, due to the symmetry of $\mb{M}(\mb{x})$ in \dots, we find
+            \begin{align*}
+                \mbb{K}_\mb{Q}(\mb{x}) &= \mb{Q}^\T \mb{K}(\mb{x}) \mb{Q} = \begin{bmatrix}
+                    \mb{Q}_\mr{C}^\T \A{R}^{\phantom{\T}} \mb{G} \big( \AT{R} \vphi \big) \AT{R} \mb{Q}_\mr{C} & \mb{Q}_\mr{C}^\T \A{V}\\
+                    -\AT{V} \mb{Q}_\mr{C} &
+                \end{bmatrix}\\
+                \mbb{K}_\mb{P}(\mb{x}) &= \mb{Q}^\T \mb{K}(\mb{x}) \mb{P} = \begin{bmatrix}
+                    \mb{Q}_\mr{C}^\T \A{R}^{\phantom{\T}} \mb{G} \big( \AT{R} \vphi \big) \AT{R} \mb{P}_\mr{C} & \mb{Q}_\mr{C}^\T \A{L}\\
+                    -\AT{V} \mb{P}_\mr{C} &
+                \end{bmatrix}.
+            \end{align*}
+            Determining $\mbb{W}(\mb{x})$ using $\mbb{K}_\mb{Q}(\mb{x})$ gives
+            \begin{align*}
+                \mbb{W} = \begin{bmatrix}
+                    \mb{Q}_\mr{V} \mb{Q}_\mr{R} &\\
+                    & \mb{W}_\mr{V}
+                \end{bmatrix},
+            \end{align*}
+            where $\mr{im\, } \mb{Q}_\mr{V} = \ker \AT{V} \mb{Q}_\mr{C}$, $\mr{im\, } \mb{Q}_\mr{R} = \ker \AT{R} \mb{Q}_\mr{C} \mb{Q}_\mr{V}$ and $\mr{im\, } \mb{W}_\mr{V} = \ker \AT{V} \mb{Q}_\mr{C}$ are all constant such that $\mbb{W}$ is constant as well. This finally yields
+            \begin{align*}
+                \mbb{W}^\T \mbb{K}_\mb{P}(\mb{x}) = \begin{bmatrix}
+                    \mb{Q}_\mr{R}^\T \mb{Q}_\mr{V}^\T \mb{Q}_\mr{C}^\T \A{R}^{\phantom{\T}} \mb{G} \big( \AT{R} \vphi \big) \AT{R} \mb{P}_\mr{C} & \mb{Q}_\mr{R}^\T \mb{Q}_\mr{V}^\T \mb{Q}_\mr{C}^\T \A{L}\\
+                    -\mb{W}_\mr{V}^\T \AT{V} \mb{P}_\mr{C} &
+                \end{bmatrix} = \begin{bmatrix}
+                    \mb{0} & \mb{Q}_\mr{R}^\T \mb{Q}_\mr{V}^\T \mb{Q}_\mr{C}^\T \A{L}\\
+                    -\mb{W}_\mr{V}^\T \AT{V} \mb{P}_\mr{C} &
+                \end{bmatrix},
+            \end{align*}
+            thus the basis functions $\mbt{P}$ and $\mbt{Q}$ of $\mbb{W}^\T \mbb{K}_\mb{P}(\mb{x})$ are constant as well, and since $\mbb{W}^\T \mbb{f}(t)$ only depends on $t$, we find a unique solution for $\mbt{x}_\mb{P}$ that also only depends on $t$.}'' (p.19)
+            \item We added a larger index two example containing a nonlinear multiport device to illustrate the approach for a more complex example. (p.15-17)
+            \item This example also demonstrates that the differential variables may be linear combinations of the original variables.\\
+            ``\textcolor{red}{When decoupling the DAE arising from the circuit of \dots\ using the dissection index, one finds
+            \begin{align*}
+                \mbt{x}_\mb{Q} = \begin{bmatrix}
+                    v_{34}\\
+                    i_{\mr{L}_2}
+                \end{bmatrix}, \quad \mbt{x}_\mb{P} = i_{\mr{L}_1}, \quad \mbb{x}_\mb{P} = \begin{bmatrix}
+                    \varphi_2\\
+                    \varphi_4
+                \end{bmatrix}, \quad \mbb{x}_\mb{Q} = \varphi_1
+            \end{align*}
+            for the differential and algebraic variables using the notation from \dots. We first observe that there are only two differential variables $\mbt{x}_\mb{Q}$, again leading to a significant reduction in the learning effort. We also see that the first differential variable $v_{34} \coloneqq \varphi_3 - \varphi_4$ is a linear combination of the original variables of the DAE. This is a general phenomenon and does not interfere with our approach, as the original variables may always be reconstructed from the sets of differential and algebraic variables by reversing the splitting using \dots
+            \begin{align*}
+                \mb{x} = \mb{P} \mbt{x} + \mb{Q} \mbb{x} = \mb{P} \big( \mbt{P} \mbt{x}_\mb{P} + \mbt{Q} \mbt{x}_\mb{Q} \big) + \mb{Q} \big( \mbb{P} \mbb{x}_\mb{P} + \mbb{Q} \mbb{x}_\mb{Q} \big).
+            \end{align*}}'' (p.16)
+        \end{itemize}
+
+        \item[2)] \textcolor{TUDa-0c}{In the introduction, many general applications for machine learning in complex engineering applications are mentioned. However, I did not understand exactly the application that is considered in the article. In both examples, the parameter $R$ appearing in the explicit constraint is known. Please explain if this is realistic if e.g.~an application after model order reduction was the goal. If not, explain the applications you have in mind.}
+        \begin{itemize}
+        \item We added a remark that the choice of parameters is arbitrary and only serves to illustrate the approach.\\
+        ``\textcolor{red}{We note that the choice to consider $L$ and $C$, and not for example $R$, as parameters here is arbitrary and only serves to illustrate the approach. One could still follow the same approach when considering e.g.~the initial conditions, or the diode model, as being parameterized.}'' (p.11)
+        \item We outlined a potential application in the context of electrothermal simulations using the new example. (p.15)
+        \item Other potential applications include constrained optimization (with constraints on e.g.~currents through or voltages across certain devices) and validating the behavior of a circuit over its entire range of operating conditions (input currents/voltages, environment temperatures, device parameters) at the end of its development.
+        \end{itemize}
+
+        \item[3)] \textcolor{TUDa-0c}{Page 8, line 34-35: Can we always decouple the parameters into those that (may) appear in the algebraic equations and those that (may) appear in the ODE? Are there topological criteria for this? And is your approach reasonable if such a classification does not exist?}
+        \begin{itemize}
+            \item For the topological basis functions mentioned in section 3 this might be possible, but we have not explored this in more detail.
+            \item We pointed this out more explicitly in the manuscript and remarked that for sequential learning approaches, such as the one used in the paper, one can still benefit from parameters not appearing in the ODE without any explicit knowledge.\\
+            ``\textcolor{red}{As of now however, we have no knowledge of an easy way to automatically determine which parameters appear in the ODE. But when combined with a sequential learning strategy, such as the one outlined in \dots, there may still be computational savings due to the learning method requiring less samples for the parameters not appearing in the ODE.}'' (p.9)
+            \item The approach is also reasonable if the number of parameters cannot be reduced by the decoupling, since two significant advantages remain: better accuracy in the algebraic constraints and a reduced number of (differential) variables to learn.
+        \end{itemize}
+
+        \item[4)] \textcolor{TUDa-0c}{Page 12, line 32: Please explain how you reconstruct the values for $L$.}
+        \begin{itemize}
+            \item We added a paragraph that explains the reconstruction in more detail.\\
+            ``\textcolor{red}{This results from the fact that the ODE in \dots\ does not depend on $L$, such that the solution of $\varphi_3$ also does not depend on that parameter. The same goes for the algebraic variable $i_\mr{L}$, thus $\varphi_2$ and $\varphi_1$ can be reconstructed only based on the knowledge of $\varphi_3$.}'' (p.13)
+        \end{itemize}
+
+        \item[5)] \textcolor{TUDa-0c}{The bases of the dissection index are not unique, I guess. Are the results comparable for all bases? Is it e.g.~favorable to choose orthogonal bases?}
+        \begin{itemize}
+            \item The bases are indeed not unique. In the context of MNA there is a clear benefit to using the topological basis functions mentioned in section 3, and we added a remark explaining this.\\
+            ``\textcolor{red}{When considering large circuits, this topological decoupling along with its topological basis functions is to be preferred over other basis function choices, as it avoids the numerical computation of the basis functions, which becomes prohibitively expensive for large systems.}'' (p.8)
+        \end{itemize}
+
+        \item[6)] \textcolor{TUDa-0c}{You emphasize that the approach is independent of the machine learning method used. Is it also applicable for any other decoupling of DAEs into an inherent ODE and the algebraic constraints, also if it is based on other index concepts?}
+        \begin{itemize}
+            \item In principle it is possible to use any index concept that provides such a decoupling. There are however clear advantages when using the dissection index, in particular in the context of MNA, see also the answer to 5).
+            \item We added a remark about this at the beginning of section 3 and also motivated the dissection index more strongly.\\
+            ``\textcolor{red}{We focus on the dissection index, as it enables the decoupling of a DAE into an ODE and a set of purely algebraic equations. This is conceptually different from the perturbation index, however other index concepts such as the tractability and differentiation indices also use decoupling strategies. Still, the dissection index maintains some advantages over these concepts, as it provides a simple algorithmic procedure for the decoupling that is similar to the tractability index, but poses less strict smoothness assumptions. In the case of MNA without controlled sources \dots, it is even possible to find a purely topological decoupling based on the dissection index. We will not make use of this topological decoupling in the derivation however, but rather consider the dissection index for a more general class of DAEs, to formulate the assumptions that are necessary for our method to work also for DAEs other than \dots.}'' (p.4)
+        \end{itemize}
+    \end{itemize}
+
+    \paragraph{Reviewing: 2}
+    \begin{enumerate}
+        \item \textcolor{TUDa-0c}{The manuscript seems to present new and significant results, however the presentation quality is low. The reader is not properly guided through the mathematical derivations and the explanation of the proposed algorithms is weak and sometimes unclear. The proposed algorithm is mixed with derivations of formulas and it is difficult to deduce the proposed procedure starting from equations. For these reasons, although it is interesting, my recommendation is to reject the paper.}
+        \begin{itemize}
+            \item We reworked section 3, that introduces the dissection index, to more clearly link the ideas presented in the introduction and section 2 with our approach in section 4. Compare also the answer to 6) above, that motivates the dissection index more strongly.
+
+            \item We also used additional assumption (p.4-5) and definition (p.5-6) environments to better highlight the key points of section 3 and to give the section more structure, see also the answer to 1) above.
+
+            \item Furthermore, we shifted math heavy remarks to the appendix, compare the reply to 1) above, in order to streamline the explanation.
+
+            \item To more clearly distinguish the derivation of the dissection index from the introduction of our approach, we also expanded section 4. It now contains additional paragraphs describing the implementation for the index one and two cases.\\
+            ``\textcolor{red}{In order to recover the algebraic variables at time $t$ in the index one case, we only need to solve \dots\ for $\mbb{x}(t)$ using the learned $\mbt{x}(t)$.}\\
+            \textcolor{red}{In the index two case, we start by solving \dots\ for $\mbt{x}_\mb{P}(t)$ using the learned $\mbt{x}_\mb{Q}(t)$. Since we also require the derivative $\ddt \mbt{x}_\mb{P}(t)$ in \dots, we consider a small time increment $\Delta t$ and approximate the derivative using a backward difference
+            \begin{align*}
+                \ddt \mbt{x}_\mb{P}(t) \approx \frac{\mbt{x}_\mb{P}(t + \Delta t) - \mbt{x}_\mb{P}(t)}{\Delta t}.
+            \end{align*}
+            We note that this only reflects our implementation; in principle any finite difference (or similar) approximation is possible. Finally, we determine $\mbb{x}_\mb{P}(t)$ and $\mbb{x}_\mb{Q}(t)$ by jointly solving \dots\ using the learned $\mbt{x}_\mb{Q}(t)$, $\mbt{x}_\mb{P}(t)$ and the approximation of $\ddt \mbt{x}_\mb{P}(t)$.}'' (p.8-9)
+
+            \item Lastly, we removed the alternative approach (previous section 5.1) to achieve a clearer presentation of our main message.
+        \end{itemize}
+
+        \item \textcolor{TUDa-0c}{Since the concept of ``Index'' is key in understanding the manuscript the authors should define it properly and not just cite existent literature.}
+        \begin{itemize}
+            \item To better introduce the idea of an index, we shortened the introduction and devoted the entire subsection 2.1 to explaining index concepts in more detail. This also includes the definition of a second index concept (the perturbation index) along with an example to better link the term index with electrical circuits, and to motivate the importance of the notion of index in this context. (p.3)
+            \item The additional definition environments in section 3 (p.5-6) also serve to emphasize the definition of the dissection index.
+        \end{itemize}
+
+        \item \textcolor{TUDa-0c}{Moreover, some symbols and variables are poorly explained or defined, see as an example matrix $G$ appearing in equation 3.}
+        \begin{itemize}
+            \item We amended the definition of $\mb{G}$ to be directly compatible with the new explanation of multiport devices and the definition of a DAE in standard form, compare 1) above.\\
+            ``\textcolor{red}{In order to obtain a version of \dots\ that is better suited to analysis and implementation, we consider the device function Jacobians
+            \begin{align}
+                \mb{G} \big( \AT{R} \vphi \big) \coloneqq \mb{J}_{\AT{R} \vphi}(\gR), \quad \mb{L}(\i{L}) \coloneqq \mb{J}_{\i{L}}(\phiL), \quad \mb{C} \big( \AT{C} \vphi \big) \coloneqq \mb{J}_{\AT{C} \vphi}(\qC),
+            \end{align}
+            where we use the same notation for the Jacobians as in \dots.}'' (p.2)
+            \item During the reworking of section 2 and section 3, we also took great care to define all of the used symbols/variables.
+        \end{itemize}
+    \end{enumerate}
+
+    We are confident that, considering our changes and additions, the manuscript now meets all acceptance criteria.
+\end{document}
