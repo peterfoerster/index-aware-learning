@@ -48,7 +48,6 @@ Pt = sym([0; 1; 0]);
 
 % DAE well determined
 Wb.' * Kb_P * Pt
-return
 
 Wt = null((Mt * Qt).');
 Wt = [0; -L_2; L_12];

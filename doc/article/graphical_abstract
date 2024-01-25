@@ -1,3 +1,3 @@
 #!/bin/bash
-pdfcrop --margins '0 -20 0 0' graphical_abstract.pdf fig.pdf
-pdfcrop fig.pdf fig_cropped.pdf
+pdfcrop --margins '0 -20 0 0' fig.pdf abstract.pdf
+pdfcrop abstract.pdf graphical_abstract.pdf

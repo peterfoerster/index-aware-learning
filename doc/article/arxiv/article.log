@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/CVE-2023-32700 patched)  (format=lualatex 2023.12.3)  25 JAN 2024 10:52
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/CVE-2023-32700 patched)  (format=lualatex 2023.12.3)  25 JAN 2024 13:29
  system commands enabled.
 **article
 (./article.tex
@@ -2079,7 +2079,7 @@ mathit.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm-bo
 ld.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on article.pdf (21 pages, 4042694 bytes).
+Output written on article.pdf (21 pages, 4042333 bytes).
 
 PDF statistics: 947 PDF objects out of 1000 (max. 8388607)
  768 compressed objects within 8 object streams
