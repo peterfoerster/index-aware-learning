@@ -1,0 +1,1 @@
+The index-aware learning approach uses the dissection index to decouple a differential-algebraic equation (DAE) into an ordinary differential equation (ODE) and a purely algebraic equation (AE). It then only learns the differential variables appearing in the ODE, and reconstructs the remaining algebraic variables from the differential ones using the algebraic equation.

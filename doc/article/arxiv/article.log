@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/CVE-2023-32700 patched)  (format=lualatex 2023.12.3)  23 JAN 2024 16:50
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/CVE-2023-32700 patched)  (format=lualatex 2023.12.3)  25 JAN 2024 10:52
  system commands enabled.
 **article
 (./article.tex
@@ -2058,14 +2058,14 @@ warning  (readjpg): Bad Exif resolution 0dpi x 0dpi (zero or negative value of a
 Here is how much of LuaTeX's memory you used:
  64012 strings out of 478457
  195350,2373549 words of node,token memory allocated
- 6832 words of node memory still in use:
+ 6820 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 4 glue, 651 kern, 1 penalty, 2 sub_mlist, 8 glyph, 
-959 attribute, 83 glue_spec, 481 attribute_list, 2 write, 3 pdf_action nodes
+955 attribute, 83 glue_spec, 479 attribute_list, 2 write, 3 pdf_action nodes
    avail lists: 1:3,2:1734,3:280,4:76,5:1126,6:70,7:12348,8:159,9:1913,10:37,11:
 1101
  81998 multiletter control sequences out of 65536+600000
  147 fonts using 11265543 bytes
- 114i,19n,103p,1564b,963s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 114i,19n,103p,1547b,967s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}</usr/share/texl
 ive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb></usr/share/texlive/te
@@ -2079,7 +2079,7 @@ mathit.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm-bo
 ld.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on article.pdf (21 pages, 4042999 bytes).
+Output written on article.pdf (21 pages, 4042694 bytes).
 
 PDF statistics: 947 PDF objects out of 1000 (max. 8388607)
  768 compressed objects within 8 object streams

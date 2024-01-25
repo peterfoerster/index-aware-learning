@@ -38,7 +38,7 @@
 \newcommand{\remarkautorefname}{Remark}
 
 \usetikzlibrary{external}
-\tikzexternalize
+% \tikzexternalize
 
 \begin{document}
 
@@ -764,27 +764,6 @@ This article introduced a new approach for learning the time and parameter depen
 
 Multiple extensions are possible within this index-aware learning framework. A natural first step could be to make use of the topological decoupling that was hinted at in \autoref{sec:di}. This would pave the way for the inclusion of controlled sources within the workflow, and thus the industrial use of the approach, with the idea being the extension of the topological decoupling to also allow for controlled sources. Focusing in on the idea of adhering to physically meaningful constraints, one could work on extending the approach to a charge conserving variant of MNA, to potentially guarantee charge conservation even for the learned solutions. Yet another direction may be the application of index-aware learning to DAEs arising elsewhere, e.g.~in modified loop analysis. (The dissection index applies to a more general class of DAEs, as \autoref{sec:di} showed.) Finally, separate but related work may focus on improving the learning step by developing new methods that are especially suited for learning ODEs.
 
-% \begin{table}
-%     \caption{}
-%     \begin{center}
-%         \begin{tabular}{}
-%             \toprule
-%             & &\\
-%             \midrule
-%             & &\\
-%             \bottomrule
-%         \end{tabular}
-%     \end{center}
-%     \begin{tablenotes}
-%         \item notes
-%     \end{tablenotes}
-% \end{table}
-
-% \begin{algorithm}
-%     \begin{algorithmic}
-%     \end{algorithmic}
-% \end{algorithm}
-
 \section*{Acknowledgments}
 This work is supported by the Graduate School CE within the Centre for Computational Engineering at Technische Universit{\"a}t Darmstadt and the ECSEL Joint Undertaking (JU) under grant agreement No.~101007319. The JU receives support from the European Union's Horizon 2020 research and innovation programme and the Netherlands, Hungary, France, Poland, Austria, Germany, Italy and Switzerland. Note that this work only reflects the authors' views and that the JU is not responsible for any use that may be made of the information it contains.
 
@@ -869,24 +848,7 @@ The authors declare no potential conflict of interests.
     thus the basis functions $\mbt{P}$ and $\mbt{Q}$ of $\mbb{W}^\T \mbb{K}_\mb{P}(\mb{x})$ are constant as well, and since $\mbb{W}^\T \mbb{f}(t)$ only depends on $t$, we find a unique solution for $\mbt{x}_\mb{P}$ that also only depends on $t$.
 \end{remark}}
 
-% \clearpage
-% \begin{pgfpicture}{0cm}{0cm}{\paperwidth}{\paperheight}
-%     \pgftext[at=\pgfpoint{0.4*\paperwidth}{0.5\paperheight}]{\includegraphics[width=.7\textwidth]{ial}}
-%     \pgftext[at=\pgfpoint{0.39*\paperwidth}{0.365\paperheight},top,right]{\includegraphics[width=.4\textwidth]{fwr2}}
-%     \pgftext[at=\pgfpoint{0.75*\paperwidth}{0.39\paperheight},top,right]{\includegraphics[width=.4\textwidth]{fwr2_consistency}}
-% \end{pgfpicture}
-% \clearpage
-
-\bibliography{../../../ai-twilight/biblio}
-% \bibliography{biblio}
-
-% \input{../fig/vcr}
-% \input{../fig/do1}
-% \input{../fig/do2}
-% \input{../fig/ial}
-% \input{../fig/solution}
-% \input{../fig/convergence}
-% \input{../fig/full_wave_rectifier}
+\bibliography{biblio}
 
 \clearpage
 
