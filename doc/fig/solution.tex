@@ -272,13 +272,13 @@
     %     legend style={at={(0.98,0.62)}}
     %     ]
 
-    %     \addplot[color=TUDa-1a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{eh}] {\csvpath/fwr2_consistency.csv};
-    %     \addplot[color=TUDa-9a, dashed, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{eb}]{\csvpath/fwr2_consistency.csv};
+    %     \addplot[color=TUDa-9a, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{eh}] {\csvpath/fwr2_consistency.csv};
+    %     \addplot[color=TUDa-9a, dotted, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{eb}]{\csvpath/fwr2_consistency.csv};
 
-    %     \addlegendentry{learned};
-    %     \addlegendimage{color=TUDa-1a, thick};
+    %     \addlegendentry{learned algebraic variables};
+    %     \addlegendimage{color=TUDa-9a, thick};
 
-    %     \addlegendentry{reconstructed};
-    %     \addlegendimage{color=TUDa-9a, dashed, thick};
+    %     \addlegendentry{reconstructed algebraic variables};
+    %     \addlegendimage{color=TUDa-9a, dotted, thick};
     % \end{semilogyaxis}
 \end{tikzpicture}
