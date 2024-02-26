@@ -89,11 +89,15 @@ We first look at the system of DAEs that results from MNA when not considering c
 \end{subequations}
 where the left hand side as a whole corresponds to $\mb{F}$ in \eqref{eq:int_dae}, and the solution variables are given by $\mb{x} = [\vphi, \i{L}, \i{V}]^\T$. The functions $\gR$, $\phiL$ and $\qC$ model resistive, capacitive or inductive devices respectively, that may each depend on the parameters $\mb{p}$. The terms for independent current and voltage sources are given by $\i{s}(t)$ and $\v{s}(t)$, while $\vphi$ denotes the vector of nodal potentials and $\i{L} $, $\i{V}$ are the currents flowing through branches containing inductors or voltage sources respectively. The last ingredient is given by the incidence matrices $\A{*}$, where $*$ indicates the device type. These collect the branch to node relations of the underlying electrical network, when considering the branches and nodes as edges and vertices of a directed graph.
 
-In order to obtain a version of \eqref{eq:md_mnai} that is better suited to analysis and implementation, we consider the device function Jacobians
+\textcolor{red}{In order to obtain a version of \eqref{eq:md_mnai} that is better suited to analysis and implementation, we consider the device function Jacobians\footnote{\textcolor{red}{Note that, for nonzero denominators, $\mb{G}$ may also be defined componentwise as
+\begin{align*}
+    \big[ \mb{G} \big( \AT{R} \vphi \big) \big]_{ij} = \frac{\big[ \gR(\AT{R} \vphi) \big]_i}{\big[ \AT{R} \vphi \big]_j},
+\end{align*}
+such that \eqref{eq:md_mnai} and \eqref{eq:md_mnaii} become truly equivalent. (The components with zero denominators are set to zero.) This alternative definition has no impact on our approach, however practical implementations often work with $\mb{G}$ as defined in \eqref{eq:md_dfj}.}}}
 \begin{align}
     \mb{G} \big( \AT{R} \vphi \big) \coloneqq \mb{J}_{\AT{R} \vphi}(\gR), \quad \mb{L}(\i{L}) \coloneqq \mb{J}_{\i{L}}(\phiL), \quad \mb{C} \big( \AT{C} \vphi \big) \coloneqq \mb{J}_{\AT{C} \vphi}(\qC), \label{eq:md_dfj}
 \end{align}
-where we use the same notation for the Jacobians as in \autoref{sec:int}. Inserting \eqref{eq:md_dfj} into the original system, while linearizing $\gR$ and writing everything in matrix form, yields
+where we use the same notation for the Jacobians as in \autoref{sec:int}. Inserting \eqref{eq:md_dfj} into the original system and writing everything in matrix form yields
 \begin{align}
     \begin{bmatrix}
         \A{C}^{\phantom{\T}} \mb{C} \big( \AT{C} \vphi \big) \AT{C} & &\\
