@@ -281,4 +281,22 @@
     %     \addlegendentry{reconstructed algebraic variables};
     %     \addlegendimage{color=TUDa-9a, dotted, thick};
     % \end{semilogyaxis}
+
+    % poster
+    \begin{semilogyaxis}[
+        xlabel={$t$ (ms)},
+        ylabel={consistency error},
+        table/col sep=comma,
+        legend style={at={(0.98,0.62)}}
+        ]
+
+        \addplot[color=TUDa-3d, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{eh}] {\csvpath/fwr2_consistency.csv};
+        \addplot[color=TUDa-3d, dotted, thick] table[x expr=\thisrow{t}*1e3, y expr=\thisrow{eb}]{\csvpath/fwr2_consistency.csv};
+
+        \addlegendentry{learned algebraic variables};
+        \addlegendimage{color=TUDa-3d, thick};
+
+        \addlegendentry{reconstructed algebraic variables};
+        \addlegendimage{color=TUDa-3d, dotted, thick};
+    \end{semilogyaxis}
 \end{tikzpicture}

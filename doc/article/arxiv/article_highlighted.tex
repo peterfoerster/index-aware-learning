@@ -89,11 +89,11 @@ We first look at the system of DAEs that results from MNA when not considering c
 \end{subequations}
 where the left hand side as a whole corresponds to $\mb{F}$ in \eqref{eq:int_dae}, and the solution variables are given by $\mb{x} = [\vphi, \i{L}, \i{V}]^\T$. The functions $\gR$, $\phiL$ and $\qC$ model resistive, capacitive or inductive devices respectively, that may each depend on the parameters $\mb{p}$. The terms for independent current and voltage sources are given by $\i{s}(t)$ and $\v{s}(t)$, while $\vphi$ denotes the vector of nodal potentials and $\i{L} $, $\i{V}$ are the currents flowing through branches containing inductors or voltage sources respectively. The last ingredient is given by the incidence matrices $\A{*}$, where $*$ indicates the device type. These collect the branch to node relations of the underlying electrical network, when considering the branches and nodes as edges and vertices of a directed graph.
 
-\textcolor{red}{In order to obtain a version of \eqref{eq:md_mnai} that is better suited to analysis and implementation, we consider the device function Jacobians
+\textcolor{red}{In order to obtain a version of \eqref{eq:md_mnai} that is better suited to analysis and implementation, we consider the device function Jacobians\footnote{\textcolor{red}{Note that the definition of $\mb{G}$ via the Jacobian only serves to obtain a matrix form in \eqref{eq:md_mnaii} and has no impact on the general approach. As such, one may also work directly with the original system from \eqref{eq:md_mnai}, however software implementations of MNA often work with $\mb{G}$ as defined in \eqref{eq:md_dfj} (e.g.~when using Newton's method for solving nonlinear systems).}}}
 \begin{align}
     \mb{G} \big( \AT{R} \vphi \big) \coloneqq \mb{J}_{\AT{R} \vphi}(\gR), \quad \mb{L}(\i{L}) \coloneqq \mb{J}_{\i{L}}(\phiL), \quad \mb{C} \big( \AT{C} \vphi \big) \coloneqq \mb{J}_{\AT{C} \vphi}(\qC), \label{eq:md_dfj}
 \end{align}
-where we use the same notation for the Jacobians as in \autoref{sec:int}.} Inserting \eqref{eq:md_dfj} into the original system, while linearizing $\gR$ and writing everything in matrix form, yields
+where we use the same notation for the Jacobians as in \autoref{sec:int}. Inserting \eqref{eq:md_dfj} into the original system and writing everything in matrix form yields
 \begin{align}
     \begin{bmatrix}
         \A{C}^{\phantom{\T}} \mb{C} \big( \AT{C} \vphi \big) \AT{C} & &\\
@@ -119,11 +119,11 @@ where we use the same notation for the Jacobians as in \autoref{sec:int}.} Inser
 \end{align}
 assuming that $\phiL$ and $\qC$ do not explicitly depend on time.
 
-\textcolor{red}{We note that \eqref{eq:md_mnaii} readily extends to multiport devices\cite{tischendorf1999}. A general inductive $n$-port for example, can also be modeled by a function $\phiL(\i{L}) = \big[ \phi_1(\i{L}), \dotsc, \phi_{n-1}(\i{L}) \big]^\T$, however the Jacobian is not necessarily diagonal in this case as the component functions of $\phiL$ can each depend on all the currents $\i{L} = [i_1, \cdots, i_{n-1}]^\T$. Regarding the incidence matrices, one chooses a reference node $\varphi_0$ for the multiport device and then considers $n-1$ branches from the remaining $n-1$ nodes to the reference. Interpreting the multiport as a single node and using Kirchhoff's current law then gives $i_0 = -\sum_{k=1}^{n-1} i_k$ for the reference current, when orienting all currents to point toward the device. Following this approach, there is then no difference in treating multiports compared to one-ports\cite{tischendorf1999}.}
+We note that \eqref{eq:md_mnaii} readily extends to multiport devices\cite{tischendorf1999}. A general inductive $n$-port for example, can also be modeled by a function $\phiL(\i{L}) = \big[ \phi_1(\i{L}), \dotsc, \phi_{n-1}(\i{L}) \big]^\T$, however the Jacobian is not necessarily diagonal in this case as the component functions of $\phiL$ can each depend on all the currents $\i{L} = [i_1, \cdots, i_{n-1}]^\T$. Regarding the incidence matrices, one chooses a reference node $\varphi_0$ for the multiport device and then considers $n-1$ branches from the remaining $n-1$ nodes to the reference. Interpreting the multiport as a single node and using Kirchhoff's current law then gives $i_0 = -\sum_{k=1}^{n-1} i_k$ for the reference current, when orienting all currents to point toward the device. Following this approach, there is then no difference in treating multiports compared to one-ports\cite{tischendorf1999}.
 
 \subsection{Index concepts}
 \label{subsec:ic}
-\textcolor{red}{Before outlining the dissection index, we want to give a brief introduction to index concepts more generally. There are multiple definitions of the index of a DAE, along with related index concepts that each possess different strengths and weaknesses\cite{mehrmann2015}. One important aspect that unites these ideas is that they agree in key cases, e.g.~when looking at linear DAEs, and the same also holds true for the dissection index. To emphasize the practical importance of the notion of index, we take a closer look at the perturbation index. It is based on a perturbed version of the DAE \eqref{eq:int_dae} (we leave out the parameters $\mb{p}$ for conciseness)
+Before outlining the dissection index, we want to give a brief introduction to index concepts more generally. There are multiple definitions of the index of a DAE, along with related index concepts that each possess different strengths and weaknesses\cite{mehrmann2015}. One important aspect that unites these ideas is that they agree in key cases, e.g.~when looking at linear DAEs, and the same also holds true for the dissection index. To emphasize the practical importance of the notion of index, we take a closer look at the perturbation index. It is based on a perturbed version of the DAE \eqref{eq:int_dae} (we leave out the parameters $\mb{p}$ for conciseness)
 \begin{align}
     \mb{F}(\mbh{x}', \mbh{x}, t) = \boldsymbol{\varepsilon}(t), \quad \mbh{x}(0) = \mbh{x}_0, \label{eq:ic_pdae}
 \end{align}
@@ -136,7 +136,7 @@ where $\varepsilon$ is a sufficiently smooth perturbation, such that the require
     \end{align*}
     for an appropriate norm $\| \cdot \|$ and the right hand side small enough.
 \end{definition}
-The idea behind this definition is to capture the impact of perturbations on the solution, as the name suggests. Usually these pertubations are assumed small, in the sense that $\| \boldsymbol{\varepsilon} \|_\infty \ll 1$, but fast changing, such that $\| \boldsymbol{\varepsilon}^{(\nu)} \|_\infty$ may grow very quickly in $\nu$.}
+The idea behind this definition is to capture the impact of perturbations on the solution, as the name suggests. Usually these pertubations are assumed small, in the sense that $\| \boldsymbol{\varepsilon} \|_\infty \ll 1$, but fast changing, such that $\| \boldsymbol{\varepsilon}^{(\nu)} \|_\infty$ may grow very quickly in $\nu$.
 
 \paragraph{Example}
 \begin{figure}[b]
@@ -146,7 +146,7 @@ The idea behind this definition is to capture the impact of perturbations on the
     \caption{Small example circuit for illustrating the perturbation index.}
     \label{fig:ic_vcr}
 \end{figure}
-\textcolor{red}{To illustrate the perturbation index, and also to hint at its relevance for circuit simulation, we consider the small example given in \autoref{fig:ic_vcr}. Applying MNA to the circuit and introducing a perturbation yields the following DAE
+To illustrate the perturbation index, and also to hint at its relevance for circuit simulation, we consider the small example given in \autoref{fig:ic_vcr}. Applying MNA to the circuit and introducing a perturbation yields the following DAE
 \begin{subequations}
     \label{eq:ic_vcr}
     \begin{align}
@@ -169,7 +169,7 @@ Noting that the solution $\mb{x}$ to the unperturbed problem follows directly fr
         \varepsilon_1(t) + C \ddt \varepsilon_2(t) + \frac{1}{R} \varepsilon_2(t)
     \end{Vmatrix}, \label{eq:ic_vcrpi}
 \end{align}
-so the unperturbed system corresponding to \eqref{eq:ic_vcr} has perturbation index $\nu = 2$ as \eqref{eq:ic_vcrpi} depends on the first derivative of $\varepsilon_2$.}
+so the unperturbed system corresponding to \eqref{eq:ic_vcr} has perturbation index $\nu = 2$ as \eqref{eq:ic_vcrpi} depends on the first derivative of $\varepsilon_2$.
 
 \paragraph{Index of MNA}
 The structure and index of MNA are well understood when only considering independent sources\cite{tischendorf1999} (as in \eqref{eq:md_mnaii}), but also when including controlled sources\cite{estevez2000ijcta}. For the case without controlled sources, there exists the following well-known topological index result.
@@ -185,9 +185,9 @@ The result can be found in terms of the perturbation index\cite{gunther1996}, th
 
 \section{Dissection index}
 \label{sec:di}
-\textcolor{red}{We focus on the dissection index, as it enables the decoupling of a DAE into an ODE and a set of purely algebraic equations. This is conceptually different from the perturbation index, however other index concepts such as the tractability and differentiation indices also use decoupling strategies. Still, the dissection index maintains some advantages over these concepts, as it provides a simple algorithmic procedure for the decoupling that is similar to the tractability index, but poses less strict smoothness assumptions. In the case of MNA without controlled sources \eqref{eq:md_mnaii}, it is even possible to find a purely topological decoupling based on the dissection index\cite{jansen2014}. We will not make use of this topological decoupling in the derivation however, but rather consider the dissection index for a more general class of DAEs, to formulate the assumptions that are necessary for our method to work also for DAEs other than \eqref{eq:md_mnaii}.}
+We focus on the dissection index, as it enables the decoupling of a DAE into an ODE and a set of purely algebraic equations. This is conceptually different from the perturbation index, however other index concepts such as the tractability and differentiation indices also use decoupling strategies. Still, the dissection index maintains some advantages over these concepts, as it provides a simple algorithmic procedure for the decoupling that is similar to the tractability index, but poses less strict smoothness assumptions. In the case of MNA without controlled sources \eqref{eq:md_mnaii}, it is even possible to find a purely topological decoupling based on the dissection index\cite{jansen2014}. We will not make use of this topological decoupling in the derivation however, but rather consider the dissection index for a more general class of DAEs, to formulate the assumptions that are necessary for our method to work also for DAEs other than \eqref{eq:md_mnaii}.
 
-\textcolor{red}{We consider a DAE in standard form\cite{jansen2014},
+We consider a DAE in standard form\cite{jansen2014},
 \begin{align}
     \mb{M}(\mb{x}) \ddt \mb{x} + \mb{K}(\mb{x}) \mb{x} + \mb{f}(t) = \mb{0}, \quad \ker \mb{M} \supsetneq \{ \mb{0} \}, \label{eq:di_dae}
 \end{align}
@@ -195,7 +195,7 @@ where the matrix-valued functions $\mb{M}$ and $\mb{K}$ are derived from \eqref{
 \begin{align*}
     \mb{M}(\mb{x}) = \mb{J}_{\mb{x}'} \big( \mb{F}(\mb{x}', \mb{x}, t) \big), \quad \mb{K}(\mb{x}) = \mb{J}_{\mb{x}} \big( \mb{F}(\mb{x}', \mb{x}, t) \big).
 \end{align*}
-Note that the description of MNA in \eqref{eq:md_mnaii} is precisely of this form. In the following, we will demonstrate the first two steps of the dissection index when applied to systems of the form of \eqref{eq:di_dae}, while stating the assumptions of our approach. Appendix \autoref{sec:dim} contains additional remarks showing that these assumptions are fulfilled by \eqref{eq:md_mnaii}.}
+Note that the description of MNA in \eqref{eq:md_mnaii} is precisely of this form. In the following, we will demonstrate the first two steps of the dissection index when applied to systems of the form of \eqref{eq:di_dae}, while stating the assumptions of our approach. Appendix \autoref{sec:dim} contains additional remarks showing that these assumptions are fulfilled by \eqref{eq:md_mnaii}.
 
 \subsection{Index one case}
 \label{subsec:ioc}
@@ -204,11 +204,11 @@ Assuming $\mb{M}(\mb{x})$ to be sufficiently smooth with values in $\mathbb{R}^{
     \mr{im\, } \mb{Q}(\mb{x}) = \ker \mb{M}(\mb{x}), \quad \mr{im\, } \mb{W}(\mb{x}) = \ker \mb{M}^\T (\mb{x})
 \end{align*}
 and the columns of $\mb{P}(\mb{x})$ and $\mb{Q}(\mb{x})$ together form a basis of $\mathbb{R}^n$, while the columns of $\mb{V}(\mb{x})$ and $\mb{W}(\mb{x})$ together form a basis of $\mathbb{R}^m$. We now make the following assumption.
-\textcolor{red}{\begin{assumption}
+\begin{assumption}
     \label{as:ioc_bf}
     The basis functions $\mb{P}$ and $\mb{Q}$ of $\mb{M}(\mb{x})$ are constant.
 \end{assumption}
-\autoref{as:ioc_bf} may seem restrictive, but it is fulfilled by many systems occurring in practical applications\cite{jansen2014}. This in particular includes MNA, as \autoref{re:dim_bf} shows.} The key idea of the dissection index is to use the basis functions to split the solution variables $\mb{x}$ into two parts
+\autoref{as:ioc_bf} may seem restrictive, but it is fulfilled by many systems occurring in practical applications\cite{jansen2014}. This in particular includes MNA, as \autoref{re:dim_bf} shows. The key idea of the dissection index is to use the basis functions to split the solution variables $\mb{x}$ into two parts
 \begin{align}
     \mb{x} = \mb{P} \mbt{x} + \mb{Q} \mbb{x}, \label{eq:ioc_x}
 \end{align}
@@ -225,10 +225,10 @@ and this motivates the notation, as only $\mbt{x}$ appears differentiated in tim
     \end{align}
 \end{subequations}
 where we also introduce shorthands for the arising products. Using the fact that $\mbt{M}(\mb{x})$ is regular by construction\cite{jansen2014}, we can now define the index one case of the dissection index.
-\textcolor{red}{\begin{definition}
+\begin{definition}
     \label{def:ioc_io}
     The DAE \eqref{eq:di_dae} has dissection index $\nu = 1$ if $\mbb{K}_\mb{Q}(\mb{x})$ is regular.
-\end{definition}}
+\end{definition}
 This is motivated by the observation that \eqref{eq:ioc_iob} is a purely algebraic equation with a locally unique solution for $\mbb{x}$ in terms of $\mbt{x}$, given that $\mbb{K}_\mb{Q}(\mb{x})$ is regular. In this case \eqref{eq:ioc_ioa} then describes an ODE in the differential variables $\mbt{x}$.
 
 \subsection{Index two case}
@@ -255,7 +255,7 @@ and inserting this splitting into the second algebraic equation \eqref{eq:itc_it
     \mbb{W}^\T (\mb{x}) \mbb{K}_\mb{P}(\mb{x}) \mbt{P}(\mb{x}) \mbt{x}_\mb{P} + \mbb{W}^\T (\mb{x}) \mbb{f}(t) &= \mb{0}. \label{eq:itc_xtp}
 \end{align}
 We now make the following two assumptions.
-\textcolor{red}{\begin{assumption}
+\begin{assumption}
     \label{as:itc_xtpdi}
     The matrix product $\mbb{W}^\T (\mb{x}) \mbb{K}_\mb{P}(\mb{x}) \mbt{P}(\mb{x}) \mbt{x}_\mb{P}$ is regular.
 \end{assumption}
@@ -263,7 +263,7 @@ We now make the following two assumptions.
     \label{as:itc_xtp}
     The basis functions $\mbt{P}$ and $\mbt{Q}$ of $\mbb{W}^\T (\mb{x}) \mbb{K}_\mb{P}(\mb{x})$ are constant and \eqref{eq:itc_xtp} possesses a locally unique solution for $\mbt{x}_\mb{P}$ in terms of $\mbt{x}_\mb{Q}$ and $t$.
 \end{assumption}
-We note that while \autoref{as:itc_xtpdi} is equivalent to the DAE not being underdetermined\cite{jansen2014}, \autoref{as:itc_xtp} is rather important for the implementation, but not for the dissection index itself. In fact our approach still works if the basis functions $\mbt{P}(\mbt{x}_\mb{Q})$ and $\mbt{Q}(\mbt{x}_\mb{Q})$ depend on $\mbt{x}_\mb{Q}$, however we focus on the stronger assumption here, since it shortens the expressions in the following without impacting the general idea and \autoref{re:dim_xtp} shows that MNA fulfills an even stronger condition than \autoref{as:itc_xtp}.}
+We note that while \autoref{as:itc_xtpdi} is equivalent to the DAE not being underdetermined\cite{jansen2014}, \autoref{as:itc_xtp} is rather important for the implementation, but not for the dissection index itself. In fact our approach still works if the basis functions $\mbt{P}(\mbt{x}_\mb{Q})$ and $\mbt{Q}(\mbt{x}_\mb{Q})$ depend on $\mbt{x}_\mb{Q}$, however we focus on the stronger assumption here, since it shortens the expressions in the following without impacting the general idea and \autoref{re:dim_xtp} shows that MNA fulfills an even stronger condition than \autoref{as:itc_xtp}.
 
 Having a locally unique solution for $\mbt{x}_\mb{P}$ in terms of $\mbt{x}_\mb{Q}$ and $t$ at hand, we now turn to the first algebraic equation \eqref{eq:itc_itia}. Similar to \eqref{eq:itc_xtp}, inserting the splitting \eqref{eq:itc_xt} of the differential variables into \eqref{eq:itc_itia} gives a system with a locally unique solution for $\mbb{x}_\mb{P}$ in terms of $\mbt{x}_\mb{Q}$, $\mbt{x}_\mb{P}$, $\mbb{x}_\mb{Q}$ and $t$, as $\mbb{V}^\T (\mb{x}) \mbb{K}_\mb{Q}(\mb{x}) \mbb{P}(\mb{x})$ is regular by construction\cite{jansen2014}
 \begin{align}
@@ -282,11 +282,11 @@ Using basis functions $\mbt{V}(\mb{x})$ and $\mbt{W}(\mb{x})$ of $\mbt{M}(\mb{x}
     \end{align}
 \end{subequations}
 We observe that \eqref{eq:itc_itiii} is of a form similar to \eqref{eq:ioc_io} and that $\mbt{V}^\T (\mb{x}) \mbt{M}(\mb{x}) \mbt{Q}$ is again regular by construction\cite{jansen2014}. Together with \eqref{eq:itc_xtp} and \eqref{eq:itc_xbp} providing locally unique solutions for $\mbt{x}_\mb{P}$ and $\mbb{x}_\mb{P}$ respectively, this motivates the following definition.
-\textcolor{red}{\begin{definition}
+\begin{definition}
     \label{def:itc_it}
      The DAE has dissection index $\nu = 2$ if $\mbt{W}^\T (\mb{x}) \mbt{K}_\mb{Q}(\mb{x}) \mbb{Q}(\mb{x})$ is regular.
 \end{definition}
-This again follows from the purely algebraic equation \eqref{eq:itc_itiiib} having a locally unique solution for $\mbb{x}_\mb{Q}$ in terms of $\mbt{x}_\mb{Q}$, $\mbt{x}_\mb{P}$, $\mbb{x}_\mb{P}$ and $t$, given that $\mbt{W}^\T (\mb{x}) \mbt{K}_\mb{Q}(\mb{x}) \mbb{Q}(\mb{x})$ is regular. The differential part \eqref{eq:itc_itiiia} then describes an ODE in the index two differential variables $\mbt{x}_\mb{Q}$, analogous to the previous case, and we call $\mbt{x}_\mb{Q}$ the differential variables and $[\mbt{x}_\mb{P}, \mbb{x}_\mb{P}, \mbb{x}_\mb{Q}]^\T$ the algebraic variables. We note that the procedure may be continued for even higher index DAEs, by repeating the steps of the index two case with $\mbt{x}_\mb{Q}$ and $\mbb{x}_\mb{Q}$ playing the roles of $\mbt{x}$ and $\mbb{x}$ respectively.}
+This again follows from the purely algebraic equation \eqref{eq:itc_itiiib} having a locally unique solution for $\mbb{x}_\mb{Q}$ in terms of $\mbt{x}_\mb{Q}$, $\mbt{x}_\mb{P}$, $\mbb{x}_\mb{P}$ and $t$, given that $\mbt{W}^\T (\mb{x}) \mbt{K}_\mb{Q}(\mb{x}) \mbb{Q}(\mb{x})$ is regular. The differential part \eqref{eq:itc_itiiia} then describes an ODE in the index two differential variables $\mbt{x}_\mb{Q}$, analogous to the previous case, and we call $\mbt{x}_\mb{Q}$ the differential variables and $[\mbt{x}_\mb{P}, \mbb{x}_\mb{P}, \mbb{x}_\mb{Q}]^\T$ the algebraic variables. We note that the procedure may be continued for even higher index DAEs, by repeating the steps of the index two case with $\mbt{x}_\mb{Q}$ and $\mbb{x}_\mb{Q}$ playing the roles of $\mbt{x}$ and $\mbb{x}$ respectively.
 
 \paragraph{First example circuit}
 \begin{figure}[b]
@@ -510,7 +510,7 @@ and finally obtain an ODE in one differential variable only, together with a pur
     \end{bmatrix} \label{eq:itc_do2}.
 \end{align}
 
-We note that all basis functions of the second step are also constant for this example, as was the case for the first step. As hinted at in \autoref{sec:di}, it is possible to find a purely topological decoupling based on the dissection index\cite{jansen2014}, which agrees with the intuition given by the index result from \autoref{th:ic_imna}. \textcolor{red}{When considering large circuits, this topological decoupling along with its topological basis functions is to be preferred over other basis function choices, as it avoids the numerical computation of the basis functions, which becomes prohibitively expensive for large systems.} We also note that a similar topological decoupling result exists for circuits including controlled sources, however only for the first step of the decoupling, as it is framed in the context of semi-explicit methods for which one only requires a DAE in semi-explicit form\cite{jansen2014}. An extension of this result to circuits of higher index is within the scope of further research.
+We note that all basis functions of the second step are also constant for this example, as was the case for the first step. As hinted at in \autoref{sec:di}, it is possible to find a purely topological decoupling based on the dissection index\cite{jansen2014}, which agrees with the intuition given by the index result from \autoref{th:ic_imna}. When considering large circuits, this topological decoupling along with its topological basis functions is to be preferred over other basis function choices, as it avoids the numerical computation of the basis functions, which becomes prohibitively expensive for large systems. We also note that a similar topological decoupling result exists for circuits including controlled sources, however only for the first step of the decoupling, as it is framed in the context of semi-explicit methods for which one only requires a DAE in semi-explicit form\cite{jansen2014}. An extension of this result to circuits of higher index is within the scope of further research.
 
 \section{Index-aware learning}
 \label{sec:ial}
@@ -530,19 +530,19 @@ In the following, we outline the use of the dissection index in the context of m
 We remark that the identification of the differential variables, and thus the advantages of the second point, are in principle available for any Spice based simulator via the purely topological decoupling\cite{jansen2014}, whereas the reconstruction of the algebraic variables requires an additional implementation. We summarize the important steps of this additional implementation for the index one and two cases below.
 
 \paragraph{Index one case}
-\textcolor{red}{In order to recover the algebraic variables at time $t$ in the index one case, we only need to solve \eqref{eq:ioc_iob} for $\mbb{x}(t)$ using the learned $\mbt{x}(t)$.}
+In order to recover the algebraic variables at time $t$ in the index one case, we only need to solve \eqref{eq:ioc_iob} for $\mbb{x}(t)$ using the learned $\mbt{x}(t)$.
 
 \paragraph{Index two case}
-\textcolor{red}{In the index two case, we start by solving \eqref{eq:itc_xtp} for $\mbt{x}_\mb{P}(t)$ using the learned $\mbt{x}_\mb{Q}(t)$. Since we also require the derivative $\ddt \mbt{x}_\mb{P}(t)$ in \eqref{eq:itc_itiiib}, we consider a small time increment $\Delta t$ and approximate the derivative using a backward difference
+In the index two case, we start by solving \eqref{eq:itc_xtp} for $\mbt{x}_\mb{P}(t)$ using the learned $\mbt{x}_\mb{Q}(t)$. Since we also require the derivative $\ddt \mbt{x}_\mb{P}(t)$ in \eqref{eq:itc_itiiib}, we consider a small time increment $\Delta t$ and approximate the derivative using a backward difference
 \begin{align*}
     \ddt \mbt{x}_\mb{P}(t) \approx \frac{\mbt{x}_\mb{P}(t + \Delta t) - \mbt{x}_\mb{P}(t)}{\Delta t}.
 \end{align*}
-We note that this only reflects our implementation; in principle any finite difference (or similar) approximation is possible. Finally, we determine $\mbb{x}_\mb{P}(t)$ and $\mbb{x}_\mb{Q}(t)$ by jointly solving \eqref{eq:itc_xbp} and \eqref{eq:itc_itiiib} using the learned $\mbt{x}_\mb{Q}(t)$, $\mbt{x}_\mb{P}(t)$ and the approximation of $\ddt \mbt{x}_\mb{P}(t)$.}
+We note that this only reflects our implementation; in principle any finite difference (or similar) approximation is possible. Finally, we determine $\mbb{x}_\mb{P}(t)$ and $\mbb{x}_\mb{Q}(t)$ by jointly solving \eqref{eq:itc_xbp} and \eqref{eq:itc_itiiib} using the learned $\mbt{x}_\mb{Q}(t)$, $\mbt{x}_\mb{P}(t)$ and the approximation of $\ddt \mbt{x}_\mb{P}(t)$.
 
 \paragraph{Example circuits}
 In terms of the example circuits from \autoref{sec:di}, the workflow amounts to the following: for the first example we consider $\varphi_3$ and $i_\mr{L}$ as the differential variables that need to be learned, and for the second example only $\varphi_3$ is left. All the remaining algebraic variables may be recovered using \eqref{eq:itc_do1} or \eqref{eq:itc_do2} respectively. Thus the learning effort is already reduced quite significantly in these two examples; from five to two variables in the first and from four down to one variable in the second. Another key benefit comes from the fact that the reconstructed algebraic variables exactly fulfill the inherent constraints of the DAE. This means that even though the learned solution variables (think of $\varphi_3$ for example) are only approximations, the reconstructions (e.g.~$\varphi_1$ or $\varphi_2$) will still be consistent. This may be of great importance for systems where the physical interpretability of the solution depends on it satisfying the constraints.
 
-There is yet another, maybe less expected, benefit that might occur. Looking at the decoupled system from \eqref{eq:itc_do2} we find that the resistance parameter $R$ and the inductance parameter $L$ only appear in the algebraic equation. In terms of our original goal of speeding up design optimization or uncertainty quantification, where a lot of solutions for varying parameter values are required, this means the following: instead of having to solve the full system for a given combination of $R$ and $L$, we can instead simply solve the algebraic equation to obtain the full solution. While the algebraic equation might be more complicated than the simple linear relations of \eqref{eq:itc_do1} and \eqref{eq:itc_do2} in general, solving it is almost certainly much faster than having to integrate the entire system in time. This becomes an even bigger advantage when knowledge about the solution is only required for specific points in time, since the algebraic equation may be solved pointwise. \textcolor{red}{As of now, we have no easy way to automatically determine which parameters appear in the ODE. But when combined with a sequential learning strategy, such as the one outlined in \autoref{sec:ne}, there may still be computational savings due to the learning method requiring less samples for the parameters not appearing in the ODE.}
+There is yet another, maybe less expected, benefit that might occur. Looking at the decoupled system from \eqref{eq:itc_do2} we find that the resistance parameter $R$ and the inductance parameter $L$ only appear in the algebraic equation. In terms of our original goal of speeding up design optimization or uncertainty quantification, where a lot of solutions for varying parameter values are required, this means the following: instead of having to solve the full system for a given combination of $R$ and $L$, we can instead simply solve the algebraic equation to obtain the full solution. While the algebraic equation might be more complicated than the simple linear relations of \eqref{eq:itc_do1} and \eqref{eq:itc_do2} in general, solving it is almost certainly much faster than having to integrate the entire system in time. This becomes an even bigger advantage when knowledge about the solution is only required for specific points in time, since the algebraic equation may be solved pointwise. As of now, we have no easy way to automatically determine which parameters appear in the ODE. But when combined with a sequential learning strategy, such as the one outlined in \autoref{sec:ne}, there may still be computational savings due to the learning method requiring less samples for the parameters not appearing in the ODE.
 
 Lastly, we emphasize that the approach is independent of the particular machine learning method that is used for learning the differential variables. Thus methods developed especially for ODEs may be employed and exchanged depending on the problem at hand.
 
@@ -607,7 +607,7 @@ We note that several improvements may be made to this strategy, such as properly
     \caption{Solution of the first example circuit for $L = \SI{1.7}{\milli\henry}$ and $C = \SI{220}{\nano\farad}$.}
     \label{fig:ne_do1_solution}
 \end{figure}
-We again consider the example of \autoref{fig:itc_do1}, where we choose $v_\mr{s}(t) = \sin(600 \pi t)\, \si{\volt}$, $R = \SI{500}{\ohm}$ and the diode is modeled by $g_\mr{D}(\varphi_3) = 10^{-14} \big( e^{(\varphi_3 / \SI{26}{\mV})} - 1 \big)\, \si{\siemens}$. The remaining parameter values are chosen according to the sequential sample selection strategy with $\SI{1}{\milli\henry} \leq L \leq \SI{3}{\milli\henry}$ and $\SI{100}{\nano\farad} \leq C \leq \SI{300}{\nano\farad}$, i.e.~$\mb{p} = [L, C]^\T$ in the context of \autoref{sec:int}. The starting points for the strategy are given by all combinations of the boundary values for $L$ and $C$ together with $t = \SI{0}{\ms}$ and $t = \SI{10}{\ms}$ once for each combination. \textcolor{red}{We note that the choice to consider $L$ and $C$, and not for example $R$, as parameters here is arbitrary and only serves to illustrate the approach. One could still follow the same approach when considering e.g.~the initial conditions, or the diode model, as being parameterized.} Recalling \eqref{eq:itc_do1}, we see that $\varphi_3$ and $i_\mr{L}$ have to be learned as the differential variables. In addition to these two, we also consider the algebraic variable $\varphi_2$ and we then compare the accuracy of learning $\varphi_2$ directly to recovering it from the two differential variables. \autoref{fig:ne_do1_solution} shows the solution for $L = \SI{1.7}{\milli\henry}$ and $C = \SI{220}{\nano\farad}$, a combination which is not part of the training data.
+We again consider the example of \autoref{fig:itc_do1}, where we choose $v_\mr{s}(t) = \sin(600 \pi t)\, \si{\volt}$, $R = \SI{500}{\ohm}$ and the diode is modeled by $g_\mr{D}(\varphi_3) = 10^{-14} \big( e^{(\varphi_3 / \SI{26}{\mV})} - 1 \big)\, \si{\siemens}$. The remaining parameter values are chosen according to the sequential sample selection strategy with $\SI{1}{\milli\henry} \leq L \leq \SI{3}{\milli\henry}$ and $\SI{100}{\nano\farad} \leq C \leq \SI{300}{\nano\farad}$, i.e.~$\mb{p} = [L, C]^\T$ in the context of \autoref{sec:int}. The starting points for the strategy are given by all combinations of the boundary values for $L$ and $C$ together with $t = \SI{0}{\ms}$ and $t = \SI{10}{\ms}$ once for each combination. We note that the choice to consider $L$ and $C$, and not for example $R$, as parameters here is arbitrary and only serves to illustrate the approach. One could still follow the same approach when considering e.g.~the initial conditions, or the diode model, as being parameterized. Recalling \eqref{eq:itc_do1}, we see that $\varphi_3$ and $i_\mr{L}$ have to be learned as the differential variables. In addition to these two, we also consider the algebraic variable $\varphi_2$ and we then compare the accuracy of learning $\varphi_2$ directly to recovering it from the two differential variables. \autoref{fig:ne_do1_solution} shows the solution for $L = \SI{1.7}{\milli\henry}$ and $C = \SI{220}{\nano\farad}$, a combination which is not part of the training data.
 \begin{figure}[b]
     \begin{center}
         \includegraphics[width=.4\textwidth]{do1_convergence}
@@ -656,7 +656,7 @@ For the second example from \autoref{fig:itc_do2}, we select $i_\mr{s}(t) = 10^{
     \label{fig:ne_do2_solution_convergence}
 \end{figure}
 
-At this point we also return to the discussion from \autoref{sec:ial} about parameters only appearing in the algebraic equation. During the learning process, the sample selection strategy requested 21 unique values for $C$, all of which required full simulations according to \eqref{eq:itc_do2}. The 7 unique values for $L$, that were requested for learning $\varphi_2$, did not require full simulations however, but rather could be reconstructed from \eqref{eq:itc_do2}. \textcolor{red}{This results from the fact that the ODE in \eqref{eq:itc_do2} does not depend on $L$, such that the solution of $\varphi_3$ also does not depend on that parameter. The same goes for the algebraic variable $i_\mr{L}$, thus $\varphi_2$ and $\varphi_1$ can be reconstructed only based on the knowledge of $\varphi_3$.} We again emphasize that time is also included as a parameter within the sample selection strategy, such that the reconstructions of the algebraic variables only need to be evaluated at the particular points in time that are requested by the strategy, rather than at all time points of the solution.
+At this point we also return to the discussion from \autoref{sec:ial} about parameters only appearing in the algebraic equation. During the learning process, the sample selection strategy requested 21 unique values for $C$, all of which required full simulations according to \eqref{eq:itc_do2}. The 7 unique values for $L$, that were requested for learning $\varphi_2$, did not require full simulations however, but rather could be reconstructed from \eqref{eq:itc_do2}. This results from the fact that the ODE in \eqref{eq:itc_do2} does not depend on $L$, such that the solution of $\varphi_3$ also does not depend on that parameter. The same goes for the algebraic variable $i_\mr{L}$, thus $\varphi_2$ and $\varphi_1$ can be reconstructed only based on the knowledge of $\varphi_3$. We again emphasize that time is also included as a parameter within the sample selection strategy, such that the reconstructions of the algebraic variables only need to be evaluated at the particular points in time that are requested by the strategy, rather than at all time points of the solution.
 \begin{figure}[t]
     \begin{center}
         \includegraphics[width=.4\textwidth]{do2_error_phi_3} \hspace{1.5cm} \includegraphics[width=.4\textwidth]{do2_error_phi_2}
@@ -702,7 +702,7 @@ In our example, the algebraic equation from \eqref{eq:itc_do2} gives an explicit
     \caption{Solutions of the differential variables of the full wave rectifier circuit for $T_1 = 65\, \si{\celsius}$ and $T_2 = 85\, \si{\celsius}$.}
     \label{fig:ne_fwr2_solution_d}
 \end{figure}
-\textcolor{red}{As a third and larger example we consider the rectifier circuit from \autoref{fig:ne_fwr2}. Aside from requiring the full index two implementation from \autoref{sec:ial}, this example also showcases another potential application in the context of electrothermal simulations. Electrothermal simulations are used to investigate the thermal behavior of a circuit, by coupling the power that is dissipated in the circuit to a set of equations describing the temperature distribution in the circuit, and by using the temperatures of some components as parameters for certain device functions. In our case, we again model the diodes as nonlinear resistors, however this time the model also includes a temperature dependence\cite{tietze2008}
+As a third and larger example we consider the rectifier circuit from \autoref{fig:ne_fwr2}. Aside from requiring the full index two implementation from \autoref{sec:ial}, this example also showcases another potential application in the context of electrothermal simulations. Electrothermal simulations are used to investigate the thermal behavior of a circuit, by coupling the power that is dissipated in the circuit to a set of equations describing the temperature distribution in the circuit, and by using the temperatures of some components as parameters for certain device functions. In our case, we again model the diodes as nonlinear resistors, however this time the model also includes a temperature dependence\cite{tietze2008}
 \begin{align*}
     g_\mr{D}(v_\mr{D}, T_\mr{D}) = I_\mr{s}(T_\mr{D}) \frac{qk}{T_\mr{D}} e^{(qk/T_\mr{D}) v_\mr{D}},
 \end{align*}
@@ -713,7 +713,7 @@ where $v_\mr{D}$ is the voltage across the diode in forward direction, $T_\mr{D}
         \sqrt{0.09 L(i_{\mr{L}_1}) L(i_{\mr{L}_2})} & 0.1 L(i_{\mr{L}_2})
     \end{bmatrix},
 \end{align*}
-where $L(i_\mr{L})$ is a fourth order polynomial in $i_\mr{L}$\cite{lullo2017}. We also note that rectifiers play an important role in many power electronics applications; they are key when converting high AC to lower DC voltages. In the example we still use a current source, since this leads to an index two circuit in this case, compare \autoref{th:ic_imna}, which requires the full index two approach from \autoref{sec:ial}.}
+where $L(i_\mr{L})$ is a fourth order polynomial in $i_\mr{L}$\cite{lullo2017}. We also note that rectifiers play an important role in many power electronics applications; they are key when converting high AC to lower DC voltages. In the example we still use a current source, since this leads to an index two circuit in this case, compare \autoref{th:ic_imna}, which requires the full index two approach from \autoref{sec:ial}.
 \begin{figure}[t]
     \begin{center}
         \includegraphics[width=.4\textwidth]{fwr2_solution_phi} \hspace{1.5cm} \includegraphics[width=.4\textwidth]{fwr2_solution_i_L_2}
@@ -729,7 +729,7 @@ where $L(i_\mr{L})$ is a fourth order polynomial in $i_\mr{L}$\cite{lullo2017}. 
     \caption{Differences between the mean predictions ($\hat{\cdot}$) and simulations of all differential and algebraic variables for $T_1 = 65\, \si{\celsius}$ and $T_2 = 85\, \si{\celsius}$.}
     \label{fig:ne_fwr2_error}
 \end{figure}
-\textcolor{red}{When decoupling the DAE arising from the circuit of \autoref{fig:ne_fwr2} using the dissection index, one finds
+When decoupling the DAE arising from the circuit of \autoref{fig:ne_fwr2} using the dissection index, one finds
 \begin{align*}
     \mbt{x}_\mb{Q} = \begin{bmatrix}
         v_{34}\\
@@ -743,13 +743,13 @@ for the differential and algebraic variables using the notation from \autoref{se
 \begin{align*}
     \mb{x} = \mb{P} \mbt{x} + \mb{Q} \mbb{x} = \mb{P} \big( \mbt{P} \mbt{x}_\mb{P} + \mbt{Q} \mbt{x}_\mb{Q} \big) + \mb{Q} \big( \mbb{P} \mbb{x}_\mb{P} + \mbb{Q} \mbb{x}_\mb{Q} \big).
 \end{align*}
-To keep the overall learning effort manageable, we consider the outer diodes $\mr{D}_1$ and $\mr{D}_4$ to depend on the same temperature $T_1$ and the inner diodes $\mr{D}_2$ and $\mr{D}_3$ to depend on the same temperature $T_2$, such that the vector of parameters is now given by $\mb{p} = [T_1, T_2]^\T$. We emphasize that there is no need to restrict the vector of parameters to two entries, this choice is only made to reduce the learning effort. For the training data we consider temperatures $\SI{20}{\celsius} \leq T_1, T_2 \leq \SI{90}{\celsius}$, and the starting values for the sample selection strategy are again obtained by considering all combinations of the boundary values together with $t = \SI{0}{\ms}$ and $t = \SI{50}{\ms}$. We then execute the learning strategy up to a tolerance of $5 \cdot 10^{-3}$ and choose the prediction point $T_1 = \SI{65}{\celsius}$, $T_2 = \SI{85}{\celsius}$ that is not included in the training data.}
+To keep the overall learning effort manageable, we consider the outer diodes $\mr{D}_1$ and $\mr{D}_4$ to depend on the same temperature $T_1$ and the inner diodes $\mr{D}_2$ and $\mr{D}_3$ to depend on the same temperature $T_2$, such that the vector of parameters is now given by $\mb{p} = [T_1, T_2]^\T$. We emphasize that there is no need to restrict the vector of parameters to two entries, this choice is only made to reduce the learning effort. For the training data we consider temperatures $\SI{20}{\celsius} \leq T_1, T_2 \leq \SI{90}{\celsius}$, and the starting values for the sample selection strategy are again obtained by considering all combinations of the boundary values together with $t = \SI{0}{\ms}$ and $t = \SI{50}{\ms}$. We then execute the learning strategy up to a tolerance of $5 \cdot 10^{-3}$ and choose the prediction point $T_1 = \SI{65}{\celsius}$, $T_2 = \SI{85}{\celsius}$ that is not included in the training data.
 
-\textcolor{red}{The solutions of the differential and algebraic variables, for $T_1 = 65\, \si{\celsius}$ and $T_2 = 85\, \si{\celsius}$, are shown in \autoref{fig:ne_fwr2_solution_d} and \autoref{fig:ne_fwr2_solution_a}, while \autoref{fig:ne_fwr2_error} shows the differences between the mean predictions and simulations for the same temperature values. The comparatively larger differences for $i_{\mr{L}_1}$ in \autoref{fig:ne_fwr2_error} stem from the prediction error being defined as a relative quantity and the absolute values of $i_{\mr{L}_1}$ being much larger than the others, compare \autoref{fig:ne_fwr2_solution_d}. Defining a function $\mb{g}(\mbt{x}_\mb{Q}, \mbt{x}_\mb{P}, \mbb{x}_\mb{P}, \mbb{x}_\mb{Q}, t, \mb{p})$ by stacking the nonlinear systems \eqref{eq:itc_xtp}, \eqref{eq:itc_xbp} and \eqref{eq:itc_itiiib} required to recover the algebraic variables, compare \autoref{sec:ial}, we can again define consistency errors
+The solutions of the differential and algebraic variables, for $T_1 = 65\, \si{\celsius}$ and $T_2 = 85\, \si{\celsius}$, are shown in \autoref{fig:ne_fwr2_solution_d} and \autoref{fig:ne_fwr2_solution_a}, while \autoref{fig:ne_fwr2_error} shows the differences between the mean predictions and simulations for the same temperature values. The comparatively larger differences for $i_{\mr{L}_1}$ in \autoref{fig:ne_fwr2_error} stem from the prediction error being defined as a relative quantity and the absolute values of $i_{\mr{L}_1}$ being much larger than the others, compare \autoref{fig:ne_fwr2_solution_d}. Defining a function $\mb{g}(\mbt{x}_\mb{Q}, \mbt{x}_\mb{P}, \mbb{x}_\mb{P}, \mbb{x}_\mb{Q}, t, \mb{p})$ by stacking the nonlinear systems \eqref{eq:itc_xtp}, \eqref{eq:itc_xbp} and \eqref{eq:itc_itiiib} required to recover the algebraic variables, compare \autoref{sec:ial}, we can again define consistency errors
 \begin{align*}
     \hat{e}(t) \coloneqq \big\| \mb{g}(\hat{\mbt{x}}_\mb{Q}, \hat{\mbt{x}}_\mb{P}, \hat{\mbb{x}}_\mb{P}, \hat{\mbb{x}}_\mb{Q}, t, \mb{p}) \big\|_2, \quad \bar{e}(t) \coloneqq \big\| \mb{g}(\hat{\mbt{x}}_\mb{Q}, \bar{\mbt{x}}_\mb{P}, \bar{\mbb{x}}_\mb{P}, \bar{\mbb{x}}_\mb{Q}, t, \mb{p}) \big\|_2,
 \end{align*}
-where the additional $\hat{\cdot}$ and $\bar{\cdot}$ again refer to learned or reconstructed variables respectively. For $T_1 = 65\, \si{\celsius}$ and $T_2 = 85\, \si{\celsius}$ the consistency errors can be seen in \autoref{fig:ne_fwr2_consistency}. We observe that the reconstructed solution again outperforms the directly learned solution by several orders of magnitude.}
+where the additional $\hat{\cdot}$ and $\bar{\cdot}$ again refer to learned or reconstructed variables respectively. For $T_1 = 65\, \si{\celsius}$ and $T_2 = 85\, \si{\celsius}$ the consistency errors can be seen in \autoref{fig:ne_fwr2_consistency}. We observe that the reconstructed solution again outperforms the directly learned solution by several orders of magnitude.
 \begin{figure}
     \begin{center}
         \includegraphics[width=.4\textwidth]{fwr2_consistency}
@@ -808,7 +808,7 @@ The authors declare no potential conflict of interests.
     since $\mb{C} \big( \AT{C} \vphi \big)$ is positive definite and hence the kernel of $\A{C}^{\phantom{\T}} \mb{C} \big( \AT{C} \vphi \big) \AT{C}$ is determined by the kernel of $\AT{C}$. As $\A{C}$ is an incidence (constant) matrix, we find that $\mb{Q}$ and $\mb{P}$ are also constant.
 \end{remark}
 
-\textcolor{red}{\begin{remark}
+\begin{remark}
     \label{re:dim_xtp}
     Again recalling \eqref{eq:md_mnaii} we observe
     \begin{align*}
@@ -846,7 +846,7 @@ The authors declare no potential conflict of interests.
         \end{bmatrix},
     \end{align*}
     thus the basis functions $\mbt{P}$ and $\mbt{Q}$ of $\mbb{W}^\T \mbb{K}_\mb{P}(\mb{x})$ are constant as well, and since $\mbb{W}^\T \mbb{f}(t)$ only depends on $t$, we find a unique solution for $\mbt{x}_\mb{P}$ that also only depends on $t$.
-\end{remark}}
+\end{remark}
 
 \bibliography{biblio}
 

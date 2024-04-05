@@ -10,6 +10,76 @@
         \end{scope}
     \end{tikzpicture}}
 
+% \begin{tikzpicture}
+%     \def\l{2.1};
+%     \ctikzset{quadpoles/transformer core/height=2}
+%     \def\h{2.8};
+
+%     \draw (0,0) node[ground] {};
+%     \draw (0,0) to[I=$i_\mr{s}$, -*] (0,\h);
+%     \draw (0.25*\l,0) node[transformer core, anchor=A2] (T) {};
+%     \draw (T.base) node {$\mr{T}_{12}$};
+%     \draw (T.B2) node[ground] {};
+
+%     \fill[TUDa-9a] (0.443*\l,0.392*\l) rectangle (0.657*\l,0.941*\l);
+%     \fill[TUDa-1a] (0.443*\l,0.392*\l) rectangle (0.657*\l,0.5*0.392*\l+0.5*0.941*\l);
+
+%     \fill[TUDa-1a] (0.443*\l+0.399*\l,0.392*\l) rectangle (0.657*\l+0.4*\l,0.941*\l);
+%     \fill[TUDa-9a] (0.443*\l+0.399*\l,0.392*\l) rectangle (0.657*\l+0.4*\l,0.4*0.392*\l+0.4*0.941*\l);
+
+%     % xt_Q: 1xL_1, 3xL_2, 1xR, 1xC, 3xg_D_1, 2xg_D_2
+%     % xt_P: ~
+%     % xb_P: 6xg_D_1, 2xg_D_2, 4xg_D_3, 1xg_D_4
+%     % xb_Q: 1xL_1, 2xL_2
+
+%     \draw (0,\h) to (T.A1);
+%     \draw (T.A1) to[short, i=$\textcolor{TUDa-9a}{i_{\mr{L}_1}}$] ++(right:0.3*\l);
+%     \draw (0,0) to (T.A2);
+%     \draw (T.B1) to[short, i<=$\textcolor{TUDa-1a}{i_{\mr{L}_2}}$] ++(left:0.3*\l);
+%     \draw (T.B1) node[circ] {};
+
+%     \begin{scope}
+%         \path[clip] (1.5*\l,0.8*\h) rectangle (2*\l+0.33*0.14*\l,1.4*\h);
+%         \draw (1.5*\l,\h) to[Do=$\mr{D}_{1-4}(\mb{p})$, color=TUDa-9a] (2.5*\l,\h);
+%     \end{scope}
+%     \begin{scope}
+%         \path[clip] (2*\l+0.33*0.14*\l,0.8*\h) rectangle (2.5*\l,1.4*\h);
+%         \draw (1.5*\l,\h) to[Do=$\mr{D}_{1-4}(\mb{p})$, color=TUDa-1a] (2.5*\l,\h);
+%     \end{scope}
+%     \draw (2.5*\l,\h) node[circ] {};
+%     \begin{scope}
+%         \path[clip] (1.5*\l,0.8*0.66*\h) rectangle (2*\l,1.2*0.66*\h);
+%         \draw (1.5*\l,0.66*\h) to[Do, color=TUDa-9a] (2.5*\l,0.66*\h);
+%     \end{scope}
+%     \begin{scope}
+%         \path[clip] (2*\l,0.8*0.66*\h) rectangle (2.5*\l,1.2*0.66*\h);
+%         \draw (1.5*\l,0.66*\h) to[Do, color=TUDa-1a] (2.5*\l,0.66*\h);
+%     \end{scope}
+%     \draw (2.5*\l,0.33*\h) to[Do, color=TUDa-9a] (1.5*\l,0.33*\h);
+%     \draw (2.5*\l,0) to[Do, color=TUDa-9a] (1.5*\l,0);
+%     \draw (2.5*\l,0) node[circ] {};
+
+%     \draw (T.B1) to (1.5*\l,\h);
+%     \draw (T.B1) to (1.5*\l,0.33*\h);
+%     \draw (T.B2) to (1.5*\l,0.66*\h);
+%     \draw (T.B2) to (1.5*\l,0);
+%     \draw (2.5*\l,0.66*\h) to (2.5*\l,\h);
+%     \draw (2.5*\l,0.33*\h) to (2.5*\l,0);
+
+%     \draw (3*\l,0) to[C=$\mr{C}$, color=TUDa-1a] (3*\l,\h);
+%     \draw (3.5*\l,\h) to[R=$\mr{R}$, color=TUDa-1a] (3.5*\l,0);
+
+%     \draw (2.5*\l,\h) to (3.5*\l,\h);
+%     \draw (2.5*\l,0) to (3.5*\l,0);
+
+%     \draw (0,\h) node[above] {$\textcolor{TUDa-9a}{\varphi_1}$};
+%     \draw (T.B1) node[above] {$\textcolor{TUDa-9a}{\varphi_2}$};
+%     \draw (2.5*\l,\h) node[above] {$\textcolor{TUDa-1a}{\varphi_3}$};
+
+%     \draw (2.5*\l,0) node[below] {\coloredsymbol{$\varphi_4$}{TUDa-9a}{TUDa-1a}};
+% \end{tikzpicture}
+
+% poster
 \begin{tikzpicture}
     \def\l{2.1};
     \ctikzset{quadpoles/transformer core/height=2}
@@ -21,11 +91,11 @@
     \draw (T.base) node {$\mr{T}_{12}$};
     \draw (T.B2) node[ground] {};
 
-    \fill[TUDa-9a] (0.443*\l,0.392*\l) rectangle (0.657*\l,0.941*\l);
-    \fill[TUDa-1a] (0.443*\l,0.392*\l) rectangle (0.657*\l,0.5*0.392*\l+0.5*0.941*\l);
+    \fill[TUDa-3d] (0.443*\l,0.392*\l) rectangle (0.657*\l,0.941*\l);
+    \fill[TUDa-1d] (0.443*\l,0.392*\l) rectangle (0.657*\l,0.5*0.392*\l+0.5*0.941*\l);
 
-    \fill[TUDa-1a] (0.443*\l+0.399*\l,0.392*\l) rectangle (0.657*\l+0.4*\l,0.941*\l);
-    \fill[TUDa-9a] (0.443*\l+0.399*\l,0.392*\l) rectangle (0.657*\l+0.4*\l,0.4*0.392*\l+0.4*0.941*\l);
+    \fill[TUDa-1d] (0.443*\l+0.399*\l,0.392*\l) rectangle (0.657*\l+0.4*\l,0.941*\l);
+    \fill[TUDa-3d] (0.443*\l+0.399*\l,0.392*\l) rectangle (0.657*\l+0.4*\l,0.4*0.392*\l+0.4*0.941*\l);
 
     % xt_Q: 1xL_1, 3xL_2, 1xR, 1xC, 3xg_D_1, 2xg_D_2
     % xt_P: ~
@@ -33,30 +103,30 @@
     % xb_Q: 1xL_1, 2xL_2
 
     \draw (0,\h) to (T.A1);
-    \draw (T.A1) to[short, i=$\textcolor{TUDa-9a}{i_{\mr{L}_1}}$] ++(right:0.3*\l);
+    \draw (T.A1) to[short, i=$\textcolor{TUDa-3d}{i_{\mr{L}_1}}$] ++(right:0.3*\l);
     \draw (0,0) to (T.A2);
-    \draw (T.B1) to[short, i<=$\textcolor{TUDa-1a}{i_{\mr{L}_2}}$] ++(left:0.3*\l);
+    \draw (T.B1) to[short, i<=$\textcolor{TUDa-1d}{i_{\mr{L}_2}}$] ++(left:0.3*\l);
     \draw (T.B1) node[circ] {};
 
     \begin{scope}
         \path[clip] (1.5*\l,0.8*\h) rectangle (2*\l+0.33*0.14*\l,1.4*\h);
-        \draw (1.5*\l,\h) to[Do=$\mr{D}_{1-4}(\mb{p})$, color=TUDa-9a] (2.5*\l,\h);
+        \draw (1.5*\l,\h) to[Do=$\mr{D}_{1-4}(\mb{p})$, color=TUDa-3d] (2.5*\l,\h);
     \end{scope}
     \begin{scope}
         \path[clip] (2*\l+0.33*0.14*\l,0.8*\h) rectangle (2.5*\l,1.4*\h);
-        \draw (1.5*\l,\h) to[Do=$\mr{D}_{1-4}(\mb{p})$, color=TUDa-1a] (2.5*\l,\h);
+        \draw (1.5*\l,\h) to[Do=$\mr{D}_{1-4}(\mb{p})$, color=TUDa-1d] (2.5*\l,\h);
     \end{scope}
     \draw (2.5*\l,\h) node[circ] {};
     \begin{scope}
         \path[clip] (1.5*\l,0.8*0.66*\h) rectangle (2*\l,1.2*0.66*\h);
-        \draw (1.5*\l,0.66*\h) to[Do, color=TUDa-9a] (2.5*\l,0.66*\h);
+        \draw (1.5*\l,0.66*\h) to[Do, color=TUDa-3d] (2.5*\l,0.66*\h);
     \end{scope}
     \begin{scope}
         \path[clip] (2*\l,0.8*0.66*\h) rectangle (2.5*\l,1.2*0.66*\h);
-        \draw (1.5*\l,0.66*\h) to[Do, color=TUDa-1a] (2.5*\l,0.66*\h);
+        \draw (1.5*\l,0.66*\h) to[Do, color=TUDa-1d] (2.5*\l,0.66*\h);
     \end{scope}
-    \draw (2.5*\l,0.33*\h) to[Do, color=TUDa-9a] (1.5*\l,0.33*\h);
-    \draw (2.5*\l,0) to[Do, color=TUDa-9a] (1.5*\l,0);
+    \draw (2.5*\l,0.33*\h) to[Do, color=TUDa-3d] (1.5*\l,0.33*\h);
+    \draw (2.5*\l,0) to[Do, color=TUDa-3d] (1.5*\l,0);
     \draw (2.5*\l,0) node[circ] {};
 
     \draw (T.B1) to (1.5*\l,\h);
@@ -66,15 +136,15 @@
     \draw (2.5*\l,0.66*\h) to (2.5*\l,\h);
     \draw (2.5*\l,0.33*\h) to (2.5*\l,0);
 
-    \draw (3*\l,0) to[C=$\mr{C}$, color=TUDa-1a] (3*\l,\h);
-    \draw (3.5*\l,\h) to[R=$\mr{R}$, color=TUDa-1a] (3.5*\l,0);
+    \draw (3*\l,0) to[C=$\mr{C}$, color=TUDa-1d] (3*\l,\h);
+    \draw (3.5*\l,\h) to[R=$\mr{R}$, color=TUDa-1d] (3.5*\l,0);
 
     \draw (2.5*\l,\h) to (3.5*\l,\h);
     \draw (2.5*\l,0) to (3.5*\l,0);
 
-    \draw (0,\h) node[above] {$\textcolor{TUDa-9a}{\varphi_1}$};
-    \draw (T.B1) node[above] {$\textcolor{TUDa-9a}{\varphi_2}$};
-    \draw (2.5*\l,\h) node[above] {$\textcolor{TUDa-1a}{\varphi_3}$};
+    \draw (0,\h) node[above] {$\textcolor{TUDa-3d}{\varphi_1}$};
+    \draw (T.B1) node[above] {$\textcolor{TUDa-3d}{\varphi_2}$};
+    \draw (2.5*\l,\h) node[above] {$\textcolor{TUDa-1d}{\varphi_3}$};
 
-    \draw (2.5*\l,0) node[below] {\coloredsymbol{$\varphi_4$}{TUDa-9a}{TUDa-1a}};
+    \draw (2.5*\l,0) node[below] {\coloredsymbol{$\varphi_4$}{TUDa-3d}{TUDa-1d}};
 \end{tikzpicture}

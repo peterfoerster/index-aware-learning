@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/CVE-2023-32700 patched)  (format=lualatex 2024.1.26)  26 FEB 2024 11:34
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/CVE-2023-32700 patched)  (format=lualatex 2024.1.26)  26 FEB 2024 15:53
  system commands enabled.
 **article
 (./article.tex
@@ -1828,7 +1828,7 @@ Overfull \vbox (6.46347pt too high) has occurred while \output is active []
 
 \openout3 = article.pag
 ]
-LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 96.
+LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 92.
  [2
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.2
 .2'
@@ -1839,7 +1839,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.2
 <vcr.pdf, id=84, 163.61125pt x 87.32625pt>
 File: vcr.pdf Graphic file (type pdf)
 <use vcr.pdf>
-Package luatex.def Info: vcr.pdf  used on input line 148.
+Package luatex.def Info: vcr.pdf  used on input line 144.
 (luatex.def)             Requested size: 177.63084pt x 94.8093pt.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.2
@@ -1849,7 +1849,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.2
 .2'
 [3<./vcr.pdf>]
 
-Package hyperref Warning: No autoref name for `Appendix' on input line 202.
+Package hyperref Warning: No autoref name for `Appendix' on input line 198.
 
 [4] [5
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
@@ -1866,7 +1866,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
 <do1.pdf, id=207, 257.96375pt x 93.34875pt>
 File: do1.pdf Graphic file (type pdf)
 <use do1.pdf>
-Package luatex.def Info: do1.pdf  used on input line 298.
+Package luatex.def Info: do1.pdf  used on input line 294.
 (luatex.def)             Requested size: 253.75394pt x 91.82869pt.
 [6<./do1.pdf>]
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
@@ -1877,133 +1877,133 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.3
 <do2.pdf, id=237, 241.90375pt x 93.34875pt>
 File: do2.pdf Graphic file (type pdf)
 <use do2.pdf>
-Package luatex.def Info: do2.pdf  used on input line 432.
+Package luatex.def Info: do2.pdf  used on input line 428.
 (luatex.def)             Requested size: 253.75394pt x 97.92648pt.
 [7<./do2.pdf>]
 <ial.pdf, id=262, 328.22626pt x 131.49126pt>
 File: ial.pdf Graphic file (type pdf)
 <use ial.pdf>
-Package luatex.def Info: ial.pdf  used on input line 523.
+Package luatex.def Info: ial.pdf  used on input line 519.
 (luatex.def)             Requested size: 355.25395pt x 142.32141pt.
  [8<./ial.pdf>] [9] [10]
-<do1_solution_phi.pdf, id=330, 234.8775pt x 189.70876pt>
+<do1_solution_phi.pdf, id=333, 234.8775pt x 189.70876pt>
 File: do1_solution_phi.pdf Graphic file (type pdf)
 <use do1_solution_phi.pdf>
-Package luatex.def Info: do1_solution_phi.pdf  used on input line 609.
+Package luatex.def Info: do1_solution_phi.pdf  used on input line 605.
 (luatex.def)             Requested size: 203.00005pt x 163.96265pt.
-<do1_solution_i_L.pdf, id=331, 235.88126pt x 189.70876pt>
+<do1_solution_i_L.pdf, id=334, 235.88126pt x 189.70876pt>
 File: do1_solution_i_L.pdf Graphic file (type pdf)
 <use do1_solution_i_L.pdf>
-Package luatex.def Info: do1_solution_i_L.pdf  used on input line 609.
+Package luatex.def Info: do1_solution_i_L.pdf  used on input line 605.
 (luatex.def)             Requested size: 203.00005pt x 163.26501pt.
-<do1_convergence.pdf, id=336, 235.88126pt x 190.7125pt>
+<do1_convergence.pdf, id=339, 235.88126pt x 190.7125pt>
 File: do1_convergence.pdf Graphic file (type pdf)
 <use do1_convergence.pdf>
-Package luatex.def Info: do1_convergence.pdf  used on input line 617.
+Package luatex.def Info: do1_convergence.pdf  used on input line 613.
 (luatex.def)             Requested size: 203.00005pt x 164.12885pt.
-<do1_error_phi_3.pdf, id=342, 234.8775pt x 201.75375pt>
+<do1_error_phi_3.pdf, id=345, 234.8775pt x 201.75375pt>
 File: do1_error_phi_3.pdf Graphic file (type pdf)
 <use do1_error_phi_3.pdf>
-Package luatex.def Info: do1_error_phi_3.pdf  used on input line 626.
+Package luatex.def Info: do1_error_phi_3.pdf  used on input line 622.
 (luatex.def)             Requested size: 203.00005pt x 174.37297pt.
-<do1_error_i_L.pdf, id=343, 234.8775pt x 201.75375pt>
+<do1_error_i_L.pdf, id=346, 234.8775pt x 201.75375pt>
 File: do1_error_i_L.pdf Graphic file (type pdf)
 <use do1_error_i_L.pdf>
-Package luatex.def Info: do1_error_i_L.pdf  used on input line 626.
+Package luatex.def Info: do1_error_i_L.pdf  used on input line 622.
 (luatex.def)             Requested size: 203.00005pt x 174.37297pt.
-<do1_error_phi_2.pdf, id=346, 234.8775pt x 201.75375pt>
+ [11<./do1_solution_phi.pdf><./do1_solution_i_L.pdf><./do1_convergence.pdf>]
+<do1_error_phi_2.pdf, id=404, 234.8775pt x 201.75375pt>
 File: do1_error_phi_2.pdf Graphic file (type pdf)
 <use do1_error_phi_2.pdf>
-Package luatex.def Info: do1_error_phi_2.pdf  used on input line 634.
+Package luatex.def Info: do1_error_phi_2.pdf  used on input line 630.
 (luatex.def)             Requested size: 203.00005pt x 174.37297pt.
-<do1_consistency.pdf, id=347, 235.88126pt x 189.70876pt>
+<do1_consistency.pdf, id=405, 235.88126pt x 189.70876pt>
 File: do1_consistency.pdf Graphic file (type pdf)
 <use do1_consistency.pdf>
-Package luatex.def Info: do1_consistency.pdf  used on input line 634.
+Package luatex.def Info: do1_consistency.pdf  used on input line 630.
 (luatex.def)             Requested size: 203.00005pt x 163.26501pt.
- [11<./do1_solution_phi.pdf><./do1_solution_i_L.pdf>]
-<do2_solution_phi.pdf, id=405, 234.8775pt x 189.70876pt>
+ [12<./do1_error_phi_3.pdf><./do1_error_i_L.pdf><./do1_error_phi_2.pdf><./do1_co
+nsistency.pdf>]
+<do2_solution_phi.pdf, id=497, 234.8775pt x 189.70876pt>
 File: do2_solution_phi.pdf Graphic file (type pdf)
 <use do2_solution_phi.pdf>
-Package luatex.def Info: do2_solution_phi.pdf  used on input line 657.
+Package luatex.def Info: do2_solution_phi.pdf  used on input line 653.
 (luatex.def)             Requested size: 203.00005pt x 163.96265pt.
-<do2_convergence.pdf, id=406, 235.88126pt x 190.7125pt>
+<do2_convergence.pdf, id=498, 235.88126pt x 190.7125pt>
 File: do2_convergence.pdf Graphic file (type pdf)
 <use do2_convergence.pdf>
-Package luatex.def Info: do2_convergence.pdf  used on input line 657.
+Package luatex.def Info: do2_convergence.pdf  used on input line 653.
 (luatex.def)             Requested size: 203.00005pt x 164.12885pt.
-<do2_error_phi_3.pdf, id=411, 234.8775pt x 201.75375pt>
+<do2_error_phi_3.pdf, id=503, 234.8775pt x 201.75375pt>
 File: do2_error_phi_3.pdf Graphic file (type pdf)
 <use do2_error_phi_3.pdf>
-Package luatex.def Info: do2_error_phi_3.pdf  used on input line 666.
+Package luatex.def Info: do2_error_phi_3.pdf  used on input line 662.
 (luatex.def)             Requested size: 203.00005pt x 174.37297pt.
-<do2_error_phi_2.pdf, id=412, 234.8775pt x 201.75375pt>
+<do2_error_phi_2.pdf, id=504, 234.8775pt x 201.75375pt>
 File: do2_error_phi_2.pdf Graphic file (type pdf)
 <use do2_error_phi_2.pdf>
-Package luatex.def Info: do2_error_phi_2.pdf  used on input line 666.
+Package luatex.def Info: do2_error_phi_2.pdf  used on input line 662.
 (luatex.def)             Requested size: 203.00005pt x 174.37297pt.
- [12<./do1_convergence.pdf>]
-<do2_consistency.pdf, id=441, 235.88126pt x 189.70876pt>
+ [13<./do2_solution_phi.pdf><./do2_convergence.pdf>]
+<do2_consistency.pdf, id=550, 235.88126pt x 189.70876pt>
 File: do2_consistency.pdf Graphic file (type pdf)
 <use do2_consistency.pdf>
-Package luatex.def Info: do2_consistency.pdf  used on input line 687.
+Package luatex.def Info: do2_consistency.pdf  used on input line 683.
 (luatex.def)             Requested size: 203.00005pt x 163.26501pt.
- [13<./do1_error_phi_3.pdf><./do1_error_i_L.pdf><./do1_error_phi_2.pdf><./do1_co
-nsistency.pdf>]
-<fwr2.pdf, id=523, 237.88875pt x 117.43875pt>
+<fwr2.pdf, id=553, 237.88875pt x 117.43875pt>
 File: fwr2.pdf Graphic file (type pdf)
 <use fwr2.pdf>
-Package luatex.def Info: fwr2.pdf  used on input line 696.
+Package luatex.def Info: fwr2.pdf  used on input line 692.
 (luatex.def)             Requested size: 253.75394pt x 125.2765pt.
-<fwr2_solution_v34.pdf, id=524, 234.8775pt x 201.75375pt>
+ [14<./do2_error_phi_3.pdf><./do2_error_phi_2.pdf><./do2_consistency.pdf>]
+<fwr2_solution_v34.pdf, id=613, 234.8775pt x 201.75375pt>
 File: fwr2_solution_v34.pdf Graphic file (type pdf)
 <use fwr2_solution_v34.pdf>
-Package luatex.def Info: fwr2_solution_v34.pdf  used on input line 704.
+Package luatex.def Info: fwr2_solution_v34.pdf  used on input line 700.
 (luatex.def)             Requested size: 203.00005pt x 174.37297pt.
-<fwr2_solution_i_L_1.pdf, id=525, 235.88126pt x 189.70876pt>
+<fwr2_solution_i_L_1.pdf, id=614, 235.88126pt x 189.70876pt>
 File: fwr2_solution_i_L_1.pdf Graphic file (type pdf)
 <use fwr2_solution_i_L_1.pdf>
-Package luatex.def Info: fwr2_solution_i_L_1.pdf  used on input line 704.
+Package luatex.def Info: fwr2_solution_i_L_1.pdf  used on input line 700.
 (luatex.def)             Requested size: 203.00005pt x 163.26501pt.
-<fwr2_solution_phi.pdf, id=533, 237.88875pt x 189.70876pt>
+<fwr2_solution_phi.pdf, id=622, 237.88875pt x 189.70876pt>
 File: fwr2_solution_phi.pdf Graphic file (type pdf)
 <use fwr2_solution_phi.pdf>
-Package luatex.def Info: fwr2_solution_phi.pdf  used on input line 723.
+Package luatex.def Info: fwr2_solution_phi.pdf  used on input line 719.
 (luatex.def)             Requested size: 203.00005pt x 161.89293pt.
-<fwr2_solution_i_L_2.pdf, id=534, 235.88126pt x 189.70876pt>
+<fwr2_solution_i_L_2.pdf, id=623, 235.88126pt x 189.70876pt>
 File: fwr2_solution_i_L_2.pdf Graphic file (type pdf)
 <use fwr2_solution_i_L_2.pdf>
-Package luatex.def Info: fwr2_solution_i_L_2.pdf  used on input line 723.
+Package luatex.def Info: fwr2_solution_i_L_2.pdf  used on input line 719.
 (luatex.def)             Requested size: 203.00005pt x 163.26501pt.
-<fwr2_error_phi.pdf, id=535, 234.8775pt x 201.75375pt>
+ [15<./fwr2.pdf><./fwr2_solution_v34.pdf><./fwr2_solution_i_L_1.pdf>]
+<fwr2_error_phi.pdf, id=681, 234.8775pt x 201.75375pt>
 File: fwr2_error_phi.pdf Graphic file (type pdf)
 <use fwr2_error_phi.pdf>
-Package luatex.def Info: fwr2_error_phi.pdf  used on input line 731.
+Package luatex.def Info: fwr2_error_phi.pdf  used on input line 727.
 (luatex.def)             Requested size: 203.00005pt x 174.37297pt.
-<fwr2_error_i_L.pdf, id=536, 234.8775pt x 201.75375pt>
+<fwr2_error_i_L.pdf, id=682, 234.8775pt x 201.75375pt>
 File: fwr2_error_i_L.pdf Graphic file (type pdf)
 <use fwr2_error_i_L.pdf>
-Package luatex.def Info: fwr2_error_i_L.pdf  used on input line 731.
+Package luatex.def Info: fwr2_error_i_L.pdf  used on input line 727.
 (luatex.def)             Requested size: 203.00005pt x 174.37297pt.
- [14<./do2_solution_phi.pdf><./do2_convergence.pdf>] [15<./do2_error_phi_3.pdf><
-./do2_error_phi_2.pdf><./do2_consistency.pdf>]
-<fwr2_consistency.pdf, id=653, 235.88126pt x 189.70876pt>
+ [16<./fwr2_solution_phi.pdf><./fwr2_solution_i_L_2.pdf><./fwr2_error_phi.pdf><.
+/fwr2_error_i_L.pdf>]
+<fwr2_consistency.pdf, id=779, 235.88126pt x 189.70876pt>
 File: fwr2_consistency.pdf Graphic file (type pdf)
 <use fwr2_consistency.pdf>
-Package luatex.def Info: fwr2_consistency.pdf  used on input line 759.
+Package luatex.def Info: fwr2_consistency.pdf  used on input line 755.
 (luatex.def)             Requested size: 203.00005pt x 163.26501pt.
- [16<./fwr2.pdf><./fwr2_solution_v34.pdf><./fwr2_solution_i_L_1.pdf>] [17<./fwr2
-_solution_phi.pdf><./fwr2_solution_i_L_2.pdf><./fwr2_error_phi.pdf><./fwr2_error
-_i_L.pdf>] [18<./fwr2_consistency.pdf>]
+ [17<./fwr2_consistency.pdf>] [18]
 (./article.bbl [19]) [20]
 <cortes.jpg, id=838, 231.7458pt x 308.352pt>
 File: cortes.jpg Graphic file (type jpg)
 <use cortes.jpg>
-Package luatex.def Info: cortes.jpg  used on input line 860.
+Package luatex.def Info: cortes.jpg  used on input line 856.
 (luatex.def)             Requested size: 65.99872pt x 85.9992pt.
 File: cortes.jpg Graphic file (type jpg)
 <use cortes.jpg>
-Package luatex.def Info: cortes.jpg  used on input line 860.
+Package luatex.def Info: cortes.jpg  used on input line 856.
 (luatex.def)             Requested size: 65.99872pt x 85.9992pt.
 
 warning  (file forster.jpg) (readjpg): Exif resolution 300dpi x 300dpi differs f
@@ -2011,20 +2011,20 @@ rom the input resolution 299dpi x 299dpi
 <forster.jpg, id=839, 99.4917pt x 127.9179pt>
 File: forster.jpg Graphic file (type jpg)
 <use forster.jpg>
-Package luatex.def Info: forster.jpg  used on input line 863.
+Package luatex.def Info: forster.jpg  used on input line 859.
 (luatex.def)             Requested size: 66.00325pt x 86.00122pt.
 File: forster.jpg Graphic file (type jpg)
 <use forster.jpg>
-Package luatex.def Info: forster.jpg  used on input line 863.
+Package luatex.def Info: forster.jpg  used on input line 859.
 (luatex.def)             Requested size: 66.00325pt x 86.00122pt.
 <jansen.jpg, id=840, 284.56313pt x 369.84172pt>
 File: jansen.jpg Graphic file (type jpg)
 <use jansen.jpg>
-Package luatex.def Info: jansen.jpg  used on input line 866.
+Package luatex.def Info: jansen.jpg  used on input line 862.
 (luatex.def)             Requested size: 65.99957pt x 85.9986pt.
 File: jansen.jpg Graphic file (type jpg)
 <use jansen.jpg>
-Package luatex.def Info: jansen.jpg  used on input line 866.
+Package luatex.def Info: jansen.jpg  used on input line 862.
 (luatex.def)             Requested size: 65.99957pt x 85.9986pt.
 
 warning  (file schilders.jpg) (readjpg): Bad Exif resolution 0dpi x 0dpi (zero o
@@ -2032,20 +2032,20 @@ r negative value of a signed integer)
 <schilders.jpg, id=841, 495.56572pt x 660.75429pt>
 File: schilders.jpg Graphic file (type jpg)
 <use schilders.jpg>
-Package luatex.def Info: schilders.jpg  used on input line 869.
+Package luatex.def Info: schilders.jpg  used on input line 865.
 (luatex.def)             Requested size: 65.99863pt x 85.9918pt.
 File: schilders.jpg Graphic file (type jpg)
 <use schilders.jpg>
-Package luatex.def Info: schilders.jpg  used on input line 869.
+Package luatex.def Info: schilders.jpg  used on input line 865.
 (luatex.def)             Requested size: 65.99863pt x 85.9918pt.
 <schoeps.jpg, id=842, 99.9735pt x 128.3997pt>
 File: schoeps.jpg Graphic file (type jpg)
 <use schoeps.jpg>
-Package luatex.def Info: schoeps.jpg  used on input line 872.
+Package luatex.def Info: schoeps.jpg  used on input line 868.
 (luatex.def)             Requested size: 66.00253pt x 85.99991pt.
 File: schoeps.jpg Graphic file (type jpg)
 <use schoeps.jpg>
-Package luatex.def Info: schoeps.jpg  used on input line 872.
+Package luatex.def Info: schoeps.jpg  used on input line 868.
 (luatex.def)             Requested size: 66.00253pt x 85.99991pt.
 [21
 
@@ -2058,16 +2058,16 @@ warning  (readjpg): Bad Exif resolution 0dpi x 0dpi (zero or negative value of a
 ><./schoeps.jpg>] (./article.aux))
 
 Here is how much of LuaTeX's memory you used:
- 64082 strings out of 478457
+ 64052 strings out of 478457
  195359,2373549 words of node,token memory allocated
- 6950 words of node memory still in use:
+ 6860 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 5 glue, 654 kern, 1 penalty, 2 sub_mlist, 8 glyph, 
-991 attribute, 83 glue_spec, 497 attribute_list, 2 write, 3 pdf_action nodes
-   avail lists: 1:1,2:1906,3:394,4:79,5:1173,6:70,7:12347,8:171,9:2116,10:37,11:
+961 attribute, 83 glue_spec, 482 attribute_list, 2 write, 3 pdf_action nodes
+   avail lists: 1:1,2:1863,3:283,4:76,5:1127,6:70,7:12347,8:159,9:1982,10:37,11:
 1101
- 82067 multiletter control sequences out of 65536+600000
- 215 fonts using 16687703 bytes
- 114i,19n,103p,1547b,951s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 82037 multiletter control sequences out of 65536+600000
+ 185 fonts using 14307055 bytes
+ 114i,19n,103p,1547b,967s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}</usr/share/texl
 ive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb></usr/share/texlive/te
@@ -2081,7 +2081,7 @@ mathit.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm-bo
 ld.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on article.pdf (21 pages, 4043565 bytes).
+Output written on article.pdf (21 pages, 4042911 bytes).
 
 PDF statistics: 952 PDF objects out of 1000 (max. 8388607)
  773 compressed objects within 8 object streams

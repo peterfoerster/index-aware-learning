@@ -1,0 +1,22 @@
+#!/bin/bash
+lualatex --shell-escape article_highlighted
+bibtex article_highlighted
+lualatex --shell-escape article_highlighted
+lualatex --shell-escape article_highlighted
+
+rm article_highlighted.aux
+rm article_highlighted.auxlock
+rm article_highlighted.bbl
+rm article_highlighted.blg
+rm article_highlighted.log
+rm article_highlighted.pag
+
+rm article_highlighted-figure0.dep
+rm article_highlighted-figure0.dpth
+rm article_highlighted-figure0.log
+rm article_highlighted-figure0.md5
+rm article_highlighted-figure0.pag
+
+pdfcrop article_highlighted-figure0.pdf fig.pdf
+# pdftk article_highlighted-figure0.pdf cat 1 output fig.pdf
+rm article_highlighted-figure0.pdf
